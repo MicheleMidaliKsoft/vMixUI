@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tabs/tab.css">
+    <script src="tabs/tab.js"></script>
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <!-- left dashboard (time board) -->
+            <div class="left">
+              <div class="video">
+                <video src="video/1.mp4" controls></video>
+              </div>
+              <div class="command">
+                <header>
+                  BASIC COMMAND AREA
+                </header>
+                  <!-- I am trying to add tabs to command area -->
+                  <div class="tools">
+                    <div class="nav-wrapper d-flex align-items-center justify-content-between">
+                      <ul class="nav nav-pills d-none d-md-flex" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false">
+                            <img src="img/video.png" alt="">
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="pills-audio-tab" data-toggle="pill" href="#pills-audio" role="tab" aria-controls="pills-audio" aria-selected="false">
+                            <img src="img/audio.png" alt="">
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="pills-vcall-tab" data-toggle="pill" href="#pills-vcall" role="tab" aria-controls="pills-vcall" aria-selected="false">
+                            <img src="img/call.png" alt="">
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="pills-production-tab" data-toggle="pill" href="#pills-production" role="tab" aria-controls="pills-production" aria-selected="false">
+                            <img src="img/production.png" alt="">
+                          </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="pills-marketing-tab" data-toggle="pill" href="#pills-marketing" role="tab" aria-controls="pills-marketing" aria-selected="false">
+                            <img src="img/marketing.png" alt="">
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- End...I am trying to add tabs to command area -->
+              </div>
+            </div>
+
+            <div class="center">
+                <div class="match_time">
+                  <p id="time"> - Match Info such as id, ..</p>
+                </div>
+                <div class="tabs-to-dropdown">
+                    <div class="nav-wrapper d-flex align-items-center justify-content-between">
+                      <ul class="nav nav-pills d-none d-md-flex" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="pills-prematch-tab" data-toggle="pill" href="#pills-prematch" role="tab" aria-controls="pills-prematch" aria-selected="false">PREMATCH</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="pills-match-tab" data-toggle="pill" href="#pills-match" role="tab" aria-controls="pills-match" aria-selected="false">MATCH</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="pills-pmatch-tab" data-toggle="pill" href="#pills-pmatch" role="tab" aria-controls="pills-pmatch" aria-selected="false">POST MATCH</a>
+                        </li>
+                      </ul>
+                    </div>
+                  
+                    <div class="tab-content" id="pills-tabContent">
+            
+                      <div class="tab-pane fade" id="pills-prematch" role="tabpanel" aria-labelledby="pills-prematch-tab" 
+                           style="border: none;
+                           box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid" style="display: flex;">
+                          
+                            <div class="controllers_list">
+                              
+                            </div>
+                            <div class="controllers"></div>
+                            <div class="btn-group">
+                              <a href="#" class="btn btn-danger">PREVIEW</a>
+                              <a href="#" class="btn btn-warning">RESET</a>
+                              <a href="#" class="btn btn-success">ON LINE</a>
+                            </div>
+                        </div>
+                      </div>
+            
+                      <div class="tab-pane fade" id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab"
+                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid">
+                          <h2 class="mb-3 font-weight-bold">MATCH</h2>
+                          <table class="table table-bordered">
+            
+                            <tbody>
+                                <tr>
+                                    <td class="static_title">Events Statistics</td>
+                                    <td colspan="2" class="home">Home</td>
+                                    <td colspan="2" class="away">Away</td>
+                                </tr>
+                              <tr>
+                                <th scope="row" rowspan="3">Goal</th>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                    
+                              <tr>
+                                <th scope="row" rowspan="3">Fouls</th>
+                              </tr>
+                              <tr>
+                                <td colspan="2" id="inc">
+                                    <input type="number" name="points" step="1">
+                                    
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                    
+                              <tr>
+                                <th scope="row" rowspan="3">Goal Concede</th>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                    
+                              <tr>
+                                <th scope="row" rowspan="3">Cross Accuracy</th>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                    
+                              <tr>
+                                <th scope="row" rowspan="3">Pass Accuracy</th>            
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+            
+                      <div class="tab-pane fade" id="pills-pmatch" role="tabpanel" aria-labelledby="pills-pmatch-tab"
+                      style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid">
+                          <h2 class="mb-3 font-weight-bold">POST MATCH</h2>
+                          <table class="table table-bordered">
+            
+                            <tbody>
+                                <tr>
+                                    <td class="static_title">Match Statistics</td>
+                                    <td colspan="2" class="home">Home</td>
+                                    <td colspan="2" class="away">Away</td>
+                                </tr>
+                              <tr>
+                                <th scope="row" rowspan="3">Corner</th>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                    
+                              <tr>
+                                <th scope="row" rowspan="3">Fouls</th>
+                              </tr>
+                              <tr>
+                                <td colspan="2" id="inc">
+                                    <input type="number" name="points" step="1">
+                                    
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                    
+                              <tr>
+                                <th scope="row" rowspan="3">Goal Concede</th>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                    
+                              <tr>
+                                <th scope="row" rowspan="3">Cross Accuracy</th>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                    
+                              <tr>
+                                <th scope="row" rowspan="3">Pass Accuracy</th>            
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                    
+                              <tr>
+                                <th scope="row" rowspan="3">Shoot Accuracy</th>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>  
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                    
+                              <tr>
+                                <th scope="row" rowspan="3">Shoot on Target</th>
+                              </tr>
+                              <tr>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                                <td colspan="2">
+                                    <input type="number">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="home">Preview</td>
+                                <td class="home">Overlay2</td>
+                                <td class="away">Preview</td>
+                                <td class="away">Overlay2</td>
+                              </tr>
+                              <tr class="mt-2">
+                                <td colspan="5"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
+                      <!-- new tab-pane for develop command area -->
+                      <div class="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab"
+                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid">
+                          <h2 class="mb-3 font-weight-bold">Videoooo</h2>
+                          hello there I am for Video
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pills-audio" role="tabpanel" aria-labelledby="pills-audio-tab"
+                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid">
+                          <h2 class="mb-3 font-weight-bold">audio</h2>
+                          hello there I am for audio
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pills-vcall" role="tabpanel" aria-labelledby="pills-vcall-tab"
+                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid">
+                          <h2 class="mb-3 font-weight-bold">vMix call</h2>
+                          hello there I am for vMix call
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pills-production" role="tabpanel" aria-labelledby="pills-production-tab"
+                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid">
+                          <h2 class="mb-3 font-weight-bold">production button</h2>
+                          hello there I am for production button
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pills-marketing" role="tabpanel" aria-labelledby="pills-marketing-tab"
+                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid">
+                          <h2 class="mb-3 font-weight-bold">marketing</h2>
+                          hello there I am for marketing
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pills-effect" role="tabpanel" aria-labelledby="pills-effect-tab"
+                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid">
+                          <h2 class="mb-3 font-weight-bold">Transition effect</h2>
+                          hello there I am for Transition effect
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pills-replay" role="tabpanel" aria-labelledby="pills-replay-tab"
+                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid">
+                          <h2 class="mb-3 font-weight-bold">Instant replay</h2>
+                          hello there I am for Instant replay
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pills-title" role="tabpanel" aria-labelledby="pills-title-tab"
+                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid">
+                          <h2 class="mb-3 font-weight-bold">Title</h2>
+                          hello there I am for title
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pills-virset" role="tabpanel" aria-labelledby="pills-virset-tab"
+                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                        <div class="container-fluid">
+                          <h2 class="mb-3 font-weight-bold">Virtual set</h2>
+                          hello there I am for Virtual set
+                        </div>
+                      </div>
+                      <!-- end of new tab pane for test -->
+            
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+              <div class="video">
+                <video src="video/1.mp4" controls></video>
+              </div>
+              <div class="command">
+                <header>
+                  SPECIAL COMMAND AREA
+                </header>
+                <!-- special commands area -->
+                <div class="tools">
+                  <div class="nav-wrapper d-flex align-items-center justify-content-between">
+                    <ul class="nav nav-pills d-none d-md-flex" id="pills-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-effect-tab" data-toggle="pill" href="#pills-effect" role="tab" aria-controls="pills-effect" aria-selected="false">
+                          <img src="img/t-effect.png" alt="">
+                        </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-replay-tab" data-toggle="pill" href="#pills-replay" role="tab" aria-controls="pills-replay" aria-selected="false">
+                          <img src="img/in-replay.png" alt="">
+                        </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-title-tab" data-toggle="pill" href="#pills-title" role="tab" aria-controls="pills-title" aria-selected="false">
+                          <img src="img/title.png" alt="">
+                        </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-virset-tab" data-toggle="pill" href="#pills-virset" role="tab" aria-controls="pills-virset" aria-selected="false">
+                          <img src="img/virtual-set.png" alt="">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End of the special commands area -->
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Time -->
+    <script>
+    // const d = new Date("2022-03-25");
+    // document.getElementById("time").innerHTML = d;
+
+
+    let s = "2005-07-08T11:22:33";
+    let date = new Date(Date.parse(s));
+    
+    const formattedDate = date.toLocaleString('en-US');
+    document.getElementById("time").innerHTML = date;
+
+    </script>
+</body>
+</html>
