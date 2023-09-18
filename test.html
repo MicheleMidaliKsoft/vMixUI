@@ -1,144 +1,40 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <title>How to disable scrolling in webpage using window.onscroll method </title>
-      
-      <style>
-      
-       .scrollable-place {
-              height: 1000px;
-        }
-        h1{
-         color: pink;
-         }
-      </style>
-      
-  </head>
-   
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <body>
-      <h1>
-          Disabling Scrolling
-      </h1>
-      
-      <b>
-           How to disable scrolling using JavaScript by the overriding window.onscroll function?
-      </b>
-      
-     <p>
-          Click on the buttons below to enable or disable scrolling.
-     </p>
-     <h1>
-        Disabling Scrolling
-    </h1>
     
-    <b>
-         How to disable scrolling using JavaScript by the overriding window.onscroll function?
-    </b>
-    
-   <p>
-        Click on the buttons below to enable or disable scrolling.
-   </p>
-   <h1>
-    Disabling Scrolling
-</h1>
+    <div id="update"></div>
 
-<b>
-     How to disable scrolling using JavaScript by the overriding window.onscroll function?
-</b>
+        <!-- update -->
+        <script>
+            function updateClock() {
+            const currentDate = new Date();
 
-<p>
-    Click on the buttons below to enable or disable scrolling.
-</p>
-<h1>
-    Disabling Scrolling
-</h1>
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth() + 1;
+            const day = currentDate.getDate();
+            const hours = currentDate.getHours();
+            const minutes = currentDate.getMinutes();
+            const seconds = currentDate.getSeconds();
 
-<b>
-     How to disable scrolling using JavaScript by the overriding window.onscroll function?
-</b>
+            const formattedDate = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
+            const time = `${hours}:${minutes}:${seconds}`;
 
-<p>
-    Click on the buttons below to enable or disable scrolling.
-</p>
-<h1>
-    Disabling Scrolling
-</h1>
+            const clockElement = document.getElementById('update');
+            clockElement.innerHTML = `${formattedDate}${time}`;
+        }
 
-<b>
-     How to disable scrolling using JavaScript by the overriding window.onscroll function?
-</b>
+        // Update the clock immediately
+        updateClock();
 
-<p>
-    Click on the buttons below to enable or disable scrolling.
-</p>
-<h1>
-    Disabling Scrolling
-</h1>
+        // Update the clock every second (1000 milliseconds)
+        setInterval(updateClock, 1000);
 
-<b>
-     How to disable scrolling using JavaScript by the overriding window.onscroll function?
-</b>
-
-<p>
-    Click on the buttons below to enable or disable scrolling.
-</p>
-<h1>
-    Disabling Scrolling
-</h1>
-
-<b>
-     How to disable scrolling using JavaScript by the overriding window.onscroll function?
-</b>
-
-<p>
-    Click on the buttons below to enable or disable scrolling.
-</p>
-<h1>
-    Disabling Scrolling
-</h1>
-
-<b>
-     How to disable scrolling using JavaScript by the overriding window.onscroll function?
-</b>
-
-<p>
-    Click on the buttons below to enable or disable scrolling.
-</p>
-      
-     <p class=”scrollable-place”>
-        <button onclick=”disableScroll()”>
-        Disable Scrolling
-        </button>
-     <button onclick=”enableScroll()”>Enable Scrolling
-     </button>
-     </p>
-   
-   <script>
-      function disableScroll() {
-       // Get the current page scroll position in the vertical direction
-      scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-           
-           
- // Get the current page scroll position in the horizontal direction 
- 
-    scrollLeft =
-      window.pageXOffset || document.documentElement.scrollLeft;
-      
-      
-     // if any scroll is attempted,
-    // set this to the previous value
-    window.onscroll = function() {
-     window.scrollTo(scrollLeft, scrollTop);
-    };
-   }
-   
-     function enableScroll() {
-        window.onscroll = function() {};
-    }
-
-   </script>
-
+        </script>
 </body>
-   
 </html>

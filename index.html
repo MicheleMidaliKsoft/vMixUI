@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zero Latency</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="tabs/tab.css">
     <script src="tabs/tab.js"></script>
@@ -299,10 +299,12 @@
                                 <input type="submit" value="ON LINE" class="btn btn-success" name="online">
                                 <table style="padding-top: 2px;">
                                   <tr>
-                                    <td class="onoff"><label for="vehicle2"> AUDIO</label></td>
-                                    <td class="onoff"><input type="checkbox" checked data-toggle="toggle" data-size="lg"></td>
-                                    <td class="onoff" ><label for="vehicle3"> IFB</label></td>
-                                    <td class="onoff"><input type="checkbox" checked data-toggle="toggle" data-size="lg"></td>
+                                    <td style="width: 25px;"></td>
+                                    <td class="vmax_button"><label for="vehicle2"> AUDIO</label></td>
+                                    <td><input type="checkbox" checked data-toggle="toggle" data-size="lg"></td>
+                                    <td style="width: 25px;"></td>
+                                    <td class="vmax_button"><label for="vehicle3"> IFB</label></td>
+                                    <td><input type="checkbox" checked data-toggle="toggle" data-size="lg"></td>
                                   </tr>
                                 </table>
                               </div>
@@ -421,14 +423,14 @@
                       <label for="">Streaming</label>
                     </td>
                     <td style="margin-right: 10px;">
-                      <button id="strButton"></button>
+                      <button id="strButton" style="margin: 0px; margin-left: 2px;"></button>
                     </td>
                     <td style="width: 35px;"></td>
                     <td>
                       <label for="">Recording</label>
                     </td>
                     <td>
-                      <button id="recButton"></button>
+                      <button id="recButton" style="margin: 0px; margin-left: 2px;"></button>
                     </td>
                   </tr>
                 </table>
@@ -439,11 +441,28 @@
 
     <!-- Time -->
     <script>
-      let s = "2005-07-08T11:22:33";
-      let date = new Date(Date.parse(s));
-      
-      const formattedDate = date.toLocaleString('en-US');
-      document.getElementById("time").innerHTML = date;
+      function updateClock() {
+            const currentDate = new Date();
+
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth() + 1;
+            const day = currentDate.getDate();
+            const hours = currentDate.getHours();
+            const minutes = currentDate.getMinutes();
+            const seconds = currentDate.getSeconds();
+
+            const formattedDate = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
+            const time = `${hours}:${minutes}:${seconds}`;
+
+            const clockElement = document.getElementById('time');
+            clockElement.innerHTML = `${formattedDate}&nbsp;&nbsp;&nbsp${time}`;
+        }
+
+        // Update the clock immediately
+        updateClock();
+
+        // Update the clock every second (1000 milliseconds)
+        setInterval(updateClock, 1000);
     </script>
 
     <!-- Streaming and Recording buttons -->

@@ -24,7 +24,7 @@
 
 .command{
     width: 100%;
-    height: 350px;   
+    height: 343px;   
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
 }
 .command header {
@@ -51,6 +51,8 @@
 
 .match_time{
     text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
+    color: var(--darkgreen);
 }
 
 .controllers_list{
@@ -72,6 +74,12 @@
 .controllers{
     padding: 5px;
     font-size: large; 
+}
+.vmax_button{
+    font-size: large;
+    color: white;
+    padding-top: 10px;
+    padding-right: 3px;
 }
 
 .controllers input{
