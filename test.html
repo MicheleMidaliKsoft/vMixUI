@@ -5,36 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      .wrapper{
+        width: 95%;
+    height: 95%;
+    margin: auto;
+      }
+      .main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left{
+    width: 28%;
+    height: 100%;
+    background-color: yellow;
+}
+.center{
+    width: 44%;
+    height: 100%;
+    background-color: blue;
+}
+.match_time{
+  width: 100%;
+  height: 15%;
+}
+.nav_wrapper{
+  width: 100%;
+  height: 85%;
+  display: inline-block;
+}
+
+.right{
+    width: 28%;
+    height: 100%;
+    background-color: green;
+}
+
+    </style>
 </head>
 <body>
     
-    <div id="update"></div>
+    <div class="wrapper">
+      <div class="main">
+        <div class="left">Left</div>
+        <div class="center">Center
+          <div class="match_time">match_time</div>
+          <div class="tabs-to-dropdown">tabs-to-dropdown <br>iiiii
+            <div class="tap_content"></div>
+            <div class="nav_wrapper"></div>
+          </div>
+        </div>
+        <div class="right">Right</div>
+      </div>
+    </div>
 
-        <!-- update -->
-        <script>
-            function updateClock() {
-            const currentDate = new Date();
-
-            const year = currentDate.getFullYear();
-            const month = currentDate.getMonth() + 1;
-            const day = currentDate.getDate();
-            const hours = currentDate.getHours();
-            const minutes = currentDate.getMinutes();
-            const seconds = currentDate.getSeconds();
-
-            const formattedDate = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
-            const time = `${hours}:${minutes}:${seconds}`;
-
-            const clockElement = document.getElementById('update');
-            clockElement.innerHTML = `${formattedDate}${time}`;
-        }
-
-        // Update the clock immediately
-        updateClock();
-
-        // Update the clock every second (1000 milliseconds)
-        setInterval(updateClock, 1000);
-
-        </script>
 </body>
 </html>

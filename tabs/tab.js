@@ -82,3 +82,9 @@ $tabsToDropdown.each(function () {
     $dropdownLinks.on("click", clickHandler);
     $pills.on("shown.bs.tab", shownTabsHandler);
 });
+
+
+
+
+
+// Check Boxes to be one selected other not selected

@@ -1,3 +1,8 @@
+ .wrapper{
+    /* background-image: url(img/zl-logo.png); */
+    background-color: #f3f4f6;
+} 
+
 .main{
     display: flex;
 }
@@ -5,8 +10,6 @@
 .main > div{
     margin: 5px;
     padding: 5px;
-    width: 95%;
-    height: 95%;
     /* border: none;
     box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08); */
 }
@@ -15,53 +18,122 @@
 }
 
 .video{
-    width: 100%;
-    height: 280px;
+    /* width: 100%;
+    height: 280px; */
+    width: 403.2px;
+    height: 226.8px;
     margin-bottom: 10px;
 }
 .video video{
-    width: 100%;
-    height: 100%;
+    width: 403.2px;
+    height: 226.8px;
 }
 
 .command{
     width: 100%;
-    height: 343px;   
+    height: 397px;   
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
+    background-image: url('img/output-onlinepngtools.png');
+    background-repeat: no-repeat;
+          background-position: 50% 0;
+          background-size: cover;
+          position: relative;
 }
 .command header {
     text-align: center;
     padding: 10px;
     font-weight: bold;
     font-size:x-large;
-    background-color: gray;
-    color: white;
+    margin-bottom: 30px;
+    color: black;
+    /* background-image: linear-gradient(gray, black, gray); */
+    /* background-color: gray; */
 }
-
+.command .nav-pills .nav-link img{
+    width: 65px;
+    height: 65px;
+    
+  }
+  .command .nav-pills .nav-link img:hover{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+    border: 1px solid black;
+  }
 .tools{
     padding: 10px;   
 }
+/* End of left part */
 
 .center{
     width: 44%;
 }
 
-.center tr{
-    font-size:small;
-    padding: 0%;
-}
-
 .match_time{
     text-align: center;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
-    color: var(--darkgreen);
+    color: black;
+    margin-bottom: 7px;
+    padding: 2.5px;
+    background-color: #f3f4f6;
 }
+.match_time td{
+    width: 33%;
+    
+}
+.match_time td img {
+    width: 100px;
+    height: 100px;
+}
+.match_time td p {
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* 
+Activated streams link drop down menu*/
+.dropdown-toggle{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    font-weight: 600;
+    
+}
+.dropdown-toggle:focus{
+    box-shadow: none !important;
+}
+
+.dropdown-toggle::after {
+    display: none;
+    
+}
+
+.dropdown-menu{
+    width: 200px;
+    padding: 0rem 0;
+    transform: translate3d(0px, 0px, 0px) !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #ffffff;
+    background-color: #dc3545;
+    padding: 12px;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 12px;
+}
+/* End of
+Activated streams link drop down menu*/
 
 .controllers_list{
     padding: 5px;
     font-size: large;
     color: white;
-    height: 480px;
+    
+    /* height: 480px; */
 }
 
 .controllers_list input[type=checkbox]{
@@ -76,6 +148,8 @@
 .controllers{
     padding: 5px;
     font-size: large; 
+    position: absolute;
+    bottom: 0px;
 }
 .vmax_button{
     font-size: large;
@@ -113,8 +187,23 @@
 	background-color: red;
 	border: 0;
 	border-radius: 35px;
-	margin: 18px;
 	outline: none;
+}
+
+.container-fluid{
+    position: relative;
+}
+
+/* start-stop button of Instant Replay */
+.container-fluid .btn-group .replay {
+	width: 35px;
+	height: 35px;
+	font-size: 0;
+	background-color: red;
+	border: 0;
+	border-radius: 35px;
+	outline: none;
+    margin-left: 3px;
 }
 
 .notRec{
@@ -143,4 +232,11 @@
 .right .app_buttons td{
     font-size: large;
     font-weight: bold;
+}
+
+.controllers .btn-group table td {
+    text-align: center;
+    padding: 3px;
+    margin-left: 50px;
+    /* border: 1px solid black; */
 }

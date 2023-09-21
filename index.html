@@ -80,11 +80,44 @@
 
             <div class="center">
                 <div class="match_time">
-                  <p id="time"></p>
-                  <p>Match Info such as id, ..</p>
+                  <table>
+                    <tr>
+                      <td>
+                        <p>Event ID: &nbsp;1234567</p>
+                      </td>
+                      <td>
+                        <p>Start: &nbsp; 21/10/2023 13:00 <br> Finish: &nbsp; 22/10/2023 15:00</p> 
+                      </td>
+                      <td>
+                        <p id="time"></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                            <span>Link Activared Stream</span>
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Link 1</a></li>
+                            <li><a class="dropdown-item" href="#">Link 2</a></li>
+                            <li><a class="dropdown-item" href="#">Link 3</a></li>
+                            <li><a class="dropdown-item" href="#">Link 4</a></li>
+                            <li><a class="dropdown-item" href="#">Link 5</a></li>
+                            <li><a class="dropdown-item" href="#">Link 6</a></li>
+                            <li><a class="dropdown-item" href="#">Link 7</a></li>
+                            <li><a class="dropdown-item" href="#">Link 8</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
                 </div>
                 <div class="tabs-to-dropdown">
-                    <div class="nav-wrapper d-flex align-items-center justify-content-between" style="padding: 0px;">
+                    <div class="nav-wrapper d-flex align-items-center justify-content-between">
                       <ul class="nav nav-pills d-none d-md-flex" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                           <a class="nav-link" id="pills-prematch-tab" data-toggle="pill" href="#pills-prematch" role="tab" aria-controls="pills-prematch" aria-selected="false">PREMATCH</a>
@@ -346,18 +379,106 @@
                         </div>
                       </div>
                       <!-- end of Marketing call controller -->
-                      <div class="tab-pane fade" id="pills-effect" role="tabpanel" aria-labelledby="pills-effect-tab"
-                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      
+                      <div class="tab-pane fade" id="pills-effect" role="tabpanel" aria-labelledby="pills-effect-tab" 
+                           style="border: none;
+                           box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <h2 class="mb-3 font-weight-bold">Transition effect</h2>
-                          hello there I am for Transition effect
+                          <form action="#">
+                            <div class="controllers_list">
+                              <label for="vehicle1"> CAM 1</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle2"> CAM 2</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle3"> CAM 3</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle2"> CAM 4</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle3"> CAM 5</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle3"> CAM 6</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle2"> CAM 7</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle3"> CAM 8</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                            </div>
+                            <div class="controllers">
+                              <div class="btn-group">
+                                <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                              </div>
+                            </div>
+                          </form>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="pills-replay" role="tabpanel" aria-labelledby="pills-replay-tab"
-                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <!-- end of Effect controller -->
+                      <div class="tab-pane fade" id="pills-replay" role="tabpanel" aria-labelledby="pills-replay-tab" 
+                           style="border: none;
+                           box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <h2 class="mb-3 font-weight-bold">Instant replay</h2>
-                          hello there I am for Instant replay
+                          <form action="#">
+                            <div class="controllers_list">
+                              <label for="vehicle1"> CAM 1</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle2"> CAM 2</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle3"> CAM 3</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle2"> CAM 4</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle3"> CAM 5</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle3"> CAM 6</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle2"> CAM 7</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                              <label for="vehicle3"> CAM 8</label>
+                              <input type="checkbox" id="" name="" value=""><br>
+                            </div>
+                            <div class="controllers">
+                              <div class="btn-group" style="display: flex;">
+
+                                <table>
+                                  <tr>
+                                    <td class="btn btn-light"
+                                    style="display: flex;
+                                    align-items: center;
+                                    justify-content: center; 
+                                    color: black; 
+                                    font-weight: bold;
+                                    background-color: white;
+                                    margin-right: 30px;
+                                    padding-top: 5px;
+                                    width: 180px;
+                                    ">
+                                      <label for="">INSTANT REPLAY</label>
+                                      <button id="replayButton" class="replay"></button>
+                                    </td>
+                                    <td colspan="2">
+                                      <input type="submit" value="PLAY LAST MARKER" class="btn btn-danger" name="" 
+                                             style="width: 170px; height: 45px; margin-bottom: 20px;">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <input type="submit" value="MARK - 10s" class="btn btn-success" name="">
+                                    </td>
+                                    <td>
+                                      <input type="submit" value="SPEED 0" class="btn btn-warning" name="">
+                                    </td>
+                                    <td><input type="submit" value="SPEED 25%" class="btn btn-warning" name="">
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <input type="submit" value="MARK - 20s" class="btn btn-success" name="">
+                                    </td>
+                                    <td><input type="submit" value="SPEED 50%" class="btn btn-warning" name=""></td>
+                                    <td><input type="submit" value="SPEED 100%" class="btn btn-warning" name=""></td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                          </form>
                         </div>
                       </div>
                       <div class="tab-pane fade" id="pills-title" role="tabpanel" aria-labelledby="pills-title-tab"
@@ -420,14 +541,14 @@
                 <table>
                   <tr>
                     <td>
-                      <label for="">Streaming</label>
+                      <label for="">STREAMING</label>
                     </td>
                     <td style="margin-right: 10px;">
                       <button id="strButton" style="margin: 0px; margin-left: 2px;"></button>
                     </td>
                     <td style="width: 35px;"></td>
                     <td>
-                      <label for="">Recording</label>
+                      <label for="">RECORDING</label>
                     </td>
                     <td>
                       <button id="recButton" style="margin: 0px; margin-left: 2px;"></button>
@@ -490,6 +611,19 @@
         else{
           $('#strButton').removeClass("Rec");
           $('#strButton').addClass("notRec");
+        }
+      });	
+
+      $('#replayButton').addClass("notRec");
+
+      $('#replayButton').click(function(){
+        if($('#replayButton').hasClass('notRec')){
+          $('#replayButton').removeClass("notRec");
+          $('#replayButton').addClass("Rec");
+        }
+        else{
+          $('#replayButton').removeClass("Rec");
+          $('#replayButton').addClass("notRec");
         }
       });	
     </script>
