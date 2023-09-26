@@ -28,23 +28,6 @@ function generateDropdownLinksMarkup(items) {
     return markup;
 }
 
-function showDropdownHandler(e) {
-    // works also
-    //const $this = $(this);
-    const $this = $(e.target);
-    const $dropdownToggle = $this.find(".dropdown-toggle");
-    const dropdownToggleText = $dropdownToggle.text().trim();
-    const $dropdownMenuLinks = $this.find(".dropdown-menu a");
-    const dNoneClass = "d-none";
-    $dropdownMenuLinks.each(function () {
-        const $this = $(this);
-        if ($this.text() == dropdownToggleText) {
-            $this.addClass(dNoneClass);
-        } else {
-            $this.removeClass(dNoneClass);
-        }
-    });
-}
 
 function clickHandler(e) {
     e.preventDefault();
@@ -85,6 +68,21 @@ $tabsToDropdown.each(function () {
 
 
 
-
-
-// Check Boxes to be one selected other not selected
+// Stream Links
+// function showDropdownHandler(e) {
+//     // works also
+//     //const $this = $(this);
+//     const $this = $(e.target);
+//     const $dropdownToggle = $this.find(".dropdown-toggle");
+//     const dropdownToggleText = $dropdownToggle.text().trim();
+//     const $dropdownMenuLinks = $this.find(".dropdown-menu a");
+//     const dNoneClass = "d-none";
+//     $dropdownMenuLinks.each(function () {
+//         const $this = $(this);
+//         if ($this.text() == dropdownToggleText) {
+//             $this.addClass(dNoneClass);
+//         } else {
+//             $this.removeClass(dNoneClass);
+//         }
+//     });
+// }

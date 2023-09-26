@@ -1,6 +1,20 @@
+:root {
+    --darkgreen: #005361;
+    --white: #fff;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-size: 1.3rem;
+  }
+ 
  .wrapper{
-    /* background-image: url(img/zl-logo.png); */
-    background-color: #f3f4f6;
+    background-color: white;
 } 
 
 .main{
@@ -8,11 +22,16 @@
 }
 
 .main > div{
-    margin: 5px;
-    padding: 5px;
+    margin: 1px;
+    padding: 1px;
     /* border: none;
     box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08); */
 }
+
+
+
+
+
 .left{
     width: 28%;
 }
@@ -32,36 +51,74 @@
 .command{
     width: 100%;
     height: 397px;   
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
-    background-image: url('img/output-onlinepngtools.png');
-    background-repeat: no-repeat;
-          background-position: 50% 0;
-          background-size: cover;
-          position: relative;
 }
 .command header {
-    text-align: center;
     padding: 10px;
-    font-weight: bold;
-    font-size:x-large;
-    margin-bottom: 30px;
+    font-size: large;
+    margin-bottom: 1px;
     color: black;
-    /* background-image: linear-gradient(gray, black, gray); */
-    /* background-color: gray; */
+    background-color: #f3f4f6;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-.command .nav-pills .nav-link img{
-    width: 65px;
-    height: 65px;
-    
-  }
-  .command .nav-pills .nav-link img:hover{
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
-    border: 1px solid black;
-  }
+.left .command header {
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .tools{
-    padding: 10px;   
+    padding: 5px; 
+    background-color: white;  
 }
+.tools .list-group .list-group-item {
+    display: flex; height: 65px; padding: 2px;  border: none; padding-top: 6px;
+}
+.tools .list-group .list-group-item .color-simpbol {
+    height: 100%; width: 9px; background-color: red; margin-right: 20px;
+}
+.tools .list-group .list-group-item img{
+    width: 35px; height: 40px;  margin-right: 20px;padding-top: 10px; 
+}
+.right .tools .list-group .list-group-item img{
+    margin-left: 20px;
+}
+.right .tools .list-group .list-group-item .color-simpbol {
+    margin-right: 0px;
+}
+.tools .list-group .list-group-item span{
+    font-size:20px;
+    padding-top: 15px;
+}
+
+.left .app_buttons{
+    display: flex;
+    line-height: 60px;
+    height: 60px;
+    padding-top: 18px;
+    padding-left: 3px;
+}
+.left .rec-str-buttons{
+    padding-left: 12px;
+    margin-left: 5px;
+    line-height: 45px;
+    height: 45px;
+    width: 112px;
+    border-radius: 6px;
+    background-color: #64748b;
+    color: white; 
+}
+.left .app_buttons img {
+    width: 20px;
+    height: 20px;
+    display: inline;
+    margin-left: 25px;
+    /* position: absolute;
+    bottom: 30px; */
+} 
+
 /* End of left part */
+
+
+
+
 
 .center{
     width: 44%;
@@ -76,8 +133,8 @@
     background-color: #f3f4f6;
 }
 .match_time td{
-    width: 33%;
-    
+ font-size: 14px;  
+ 
 }
 .match_time td img {
     width: 100px;
@@ -85,12 +142,11 @@
 }
 .match_time td p {
     text-align: left;
-    margin-left: 10px;
 }
 
 /* 
 Activated streams link drop down menu*/
-.dropdown-toggle{
+/* .dropdown-toggle{
     width: 200px;
     display: flex;
     justify-content: space-between;
@@ -124,27 +180,127 @@ Activated streams link drop down menu*/
     display: block;
     width: 100%;
     padding: 12px;
-}
+} */
+/* .tabs-to-dropdown .dropdown-menu {
+    border: none;
+    box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);
+  } */
 /* End of
 Activated streams link drop down menu*/
 
+/*  content with taps command will show in the center part */
+  
+.tabs-to-dropdown .nav-wrapper {
+    padding: 1px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
+    background-color: #f3f4f6;
+    
+  }
+  .tabs-to-dropdown .nav-wrapper .step-number{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid gray;
+  }
+
+  /* prematch - match - post mach buttons */
+  .tabs-to-dropdown .nav-wrapper a {
+    font-size:medium;
+    color: black;
+  }
+  
+  .controllers{
+    padding: 5px;
+    position: fixed;
+    bottom: 5px;
+}
+    .controllers input{
+        width: 95px;
+        height: 35px;
+        margin: 4px;
+    } 
+
+  .tools .nav-links{
+    color: black;
+    text-decoration: none;
+    
+  }
+  .tools .nav-links:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
+    color: blue;
+  }
+  .tools .nav-links:visited {
+    color: pink;
+  }
+
+  .tabs-to-dropdown .nav-pills .nav-link.active {
+    background-color: var(--darkgreen);
+  }
+
+  .tabs-to-dropdown .nav-pills .nav-link:hover {
+    color: black;
+  }
+  
+  .tabs-to-dropdown .nav-pills li:not(:last-child) {
+    margin-right: 30px;
+    margin-inline-start: 10px;
+  }
+
+  
+  .tabs-to-dropdown .tab-content .container-fluid {
+    max-width: 1250px;
+    padding-top: 7px;
+    height: 536px;
+    /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12); */
+    margin-top: 8px;
+    background-color: white;
+  }
+  .container-fluid .tools{
+    padding: 5px;   
+    }
+    .container-fluid .tools .list-group .list-group-item {
+        display: flex; height: 40px; padding: 2px;  border: none; line-height: 38px;
+    }
+    .container-fluid .tools .list-group .list-group-item .color-simpbol {
+        height: 100%; width: 9px; background-color: red; margin-right: 20px;
+    }
+    .container-fluid .tools .list-group .list-group-item span{
+        font-size:16px;
+        padding-top: 15px;
+    }
+    .container-fluid .tools .list-group .list-group-item input[type=radio]{
+        margin-left: 10px;
+        border-radius: 1px;
+        width: 23px;
+        height: 23px;
+        position: absolute; right: 280px;
+    }
+
+  
+  .tabs-to-dropdown .dropdown-item {
+    padding: 14px 28px;
+  }
+  
+  .tabs-to-dropdown .dropdown-item:active {
+    color: var(--white);
+  }
+
+  
+  @media (min-width: 1280px) {
+    .tabs-to-dropdown .nav-wrapper {
+      padding: 15px 30px;
+    }
+  }
+
+/* 
 .controllers_list{
     padding: 5px;
     font-size: large;
     color: white;
-    
-    /* height: 480px; */
 }
 
-.controllers_list input[type=checkbox]{
-    width: 15px;
-    height: 15px;
-
-}
-.controllers_list input[type=button]{
-    
-    height: 25px;
-}
 .controllers{
     padding: 5px;
     font-size: large; 
@@ -157,64 +313,50 @@ Activated streams link drop down menu*/
     padding-top: 10px;
     padding-right: 3px;
 }
-
-.controllers input{
-    width: 95px;
-    height: 35px;
-    margin: 4px;
-}
+*/
 
 
+/* Right part of the page */
 .right{
     width: 28%;
 }
 
-.app_buttons{
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
-    padding: 10px;
-}
-
-.app_buttons img {
-    width: 40px;
-    height: 40px;
-    display: inline;
-    margin-left: 20px;
-}  
-.right .app_buttons button {
-	width: 35px;
-	height: 35px;
-	font-size: 0;
-	background-color: red;
-	border: 0;
-	border-radius: 35px;
-	outline: none;
-}
-
-.container-fluid{
-    position: relative;
-}
 
 /* start-stop button of Instant Replay */
-.container-fluid .btn-group .replay {
-	width: 35px;
-	height: 35px;
+.app_buttons{
+    display: flex;
+    line-height: 60px;
+    height: 60px;
+    padding-top: 18px;
+}
+.right .app_buttons{
+    padding-right: 8px;
+}
+.rec-str-buttons{
+    line-height: 45px;
+    height: 45px;
+    width: 140px;
+    padding-right: 12px;
+    border-radius: 6px;
+    background-color: #64748b;
+    color: white; 
+}
+.right .app_buttons{
+    padding-right: 8px;
+}
+
+.right .app_buttons button {
+	width: 31px;
+	height: 31px;
 	font-size: 0;
-	background-color: red;
+	background-color: green;
 	border: 0;
 	border-radius: 35px;
 	outline: none;
-    margin-left: 3px;
-}
-
-.notRec{
-	background-color: darkred;
-}
-
-.Rec{
-	animation-name: pulse;
-	animation-duration: 1.5s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+    position: absolute;
+    bottom: 24px;
+    margin-right: 12px;
+    border: 4px solid white;
 }
 
 @keyframes pulse{
@@ -229,10 +371,8 @@ Activated streams link drop down menu*/
 	}
 } 
 
-.right .app_buttons td{
-    font-size: large;
-    font-weight: bold;
-}
+
+
 
 .controllers .btn-group table td {
     text-align: center;

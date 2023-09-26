@@ -19,6 +19,44 @@
 <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 </head>
+
+<!-- <style>
+
+  .container-fluid ul li {
+    margin-top: 5px;
+    height: 30px;
+    /* background-image: linear-gradient(rgb(199, 191, 191),white); */
+  }
+  .container-fluid ul li:hover{
+    height: 35px;
+    padding-left: 40px;
+    color: red;
+  }
+
+  .container-fluid ul li input[type=radio]{
+    position: absolute;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    top: 0px;}
+
+  .container-fluid .controllers input[type=submit]{
+    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+    position: relative;
+    animation: submitMove 2s;
+    animation-timing-function: ease-out;
+  }
+  @keyframes submitMove {
+    from {bottom: 100px;}
+    to {bottom: 0px;}
+  }
+  .container-fluid .controllers ul li .btn.btn-success{
+    background-color: red;
+  }
+
+</style> -->
+
+
 <body>
     <div class="wrapper">
         <div class="main">
@@ -28,77 +66,96 @@
                 <video src="video/1.mp4" controls></video>
               </div>
               <div class="command">
-                <header>
+                <header style="text-align: left; padding-left: 10px;">
                   BASIC COMMAND AREA
                 </header>
                   <!-- I am trying to add tabs to command area -->
-                  <div class="tools">
-                    <div class="nav-wrapper d-flex align-items-center justify-content-between">
-                      <ul class="nav nav-pills d-none d-md-flex" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false">
-                            <img src="img/video-camera.png" alt="" title="Video">
-                          </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="pills-audio-tab" data-toggle="pill" href="#pills-audio" role="tab" aria-controls="pills-audio" aria-selected="false">
-                            <img src="img/audio.png" alt="" title="Audio">
-                          </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="pills-vcall-tab" data-toggle="pill" href="#pills-vcall" role="tab" aria-controls="pills-vcall" aria-selected="false">
-                            <img src="img/call2.png" alt="" title="vMix Call">
-                          </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="pills-production-tab" data-toggle="pill" href="#pills-production" role="tab" aria-controls="pills-production" aria-selected="false">
-                            <img src="img/production.png" alt="" title="Production">
-                          </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="pills-marketing-tab" data-toggle="pill" href="#pills-marketing" role="tab" aria-controls="pills-marketing" aria-selected="false">
-                            <img src="img/marketing.png" alt="" title="Marketing">
-                          </a>
-                        </li>
+                  <div class="tabs-to-dropdown">
+                    <div class="tools">
+                      <ul class="list-group">
+                        <a onfocus="background('pills-virset-tab');" class="nav-links" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false">
+                          <li class="list-group-item">
+                            <div class="color-simpbol"></div>
+                            <img src="img/video-camera.png" alt="" title="">
+                            <span>Video</span>
+                          </li>
+                        </a>
+                        <a onfocus="background('pills-virset-tab');" class="nav-links" id="pills-audio-tab" data-toggle="pill" href="#pills-audio" role="tab" aria-controls="pills-audio" aria-selected="false">
+                          <li class="list-group-item">
+                            <div class="color-simpbol" style="background-color:orange;"></div>
+                            <img src="img/audio.png" alt="" title="Help">
+                            <span>Audio</span>
+                          </li>
+                        </a>
+                        <a onfocus="background('pills-virset-tab');" class="nav-links" id="pills-vcall-tab" data-toggle="pill" href="#pills-vcall" role="tab" aria-controls="pills-vcall" aria-selected="false">
+                          <li class="list-group-item">
+                            <div class="color-simpbol" style="background-color:green ;"></div>
+                            <img src="img/call2.png" alt="" title="Help">
+                            <span>vMix Call</span>
+                          </li>
+                        </a>  
+                        <a onfocus="background('pills-virset-tab');" class="nav-links" id="pills-production-tab" data-toggle="pill" href="#pills-production" role="tab" aria-controls="pills-production" aria-selected="false">
+                          <li class="list-group-item">
+                            <div class="color-simpbol" style="background-color: #4688ff;"></div>
+                            <img src="img/production.png" alt="" title="Help">
+                            <span>Production (Mixer)</span>
+                          </li>
+                        </a>  
+                        <a onfocus="background('pills-virset-tab');" class="nav-links" id="pills-marketing-tab" data-toggle="pill" href="#pills-marketing" role="tab" aria-controls="pills-marketing" aria-selected="false">
+                          <li class="list-group-item">
+                            <div class="color-simpbol" style="background-color: #8142e9"></div>
+                            <img src="img/marketing.png" alt="" title="Help">
+                            <span>Marketing</span>
+                          </li>
+                        </a>
+                      
                       </ul>
                     </div>
                   </div>
                   <!-- End...I am trying to add tabs to command area -->
               </div>
+              <!--<div class="app_buttons"> -->
+                 
               <div class="app_buttons">
-                <a href="#">
-                  <img src="img/reset.png" alt="Reset" title="Reset">
-                </a>&nbsp;&nbsp;&nbsp;
-                <a href="#">
-                  <img src="img/help.png" alt="" title="Help">
-                </a>&nbsp;&nbsp;&nbsp;
-                <a href="#">
-                  <img src="img/back.png" alt="" title="Back">
-                </a>
+                <div class="rec-str-buttons">
+                    <span>Back</span>
+                    <img src="img/back.png" alt="" title="Back">
+                </div>
+                
+                <div class="rec-str-buttons">
+                    <span>Help</span>
+                    <img src="img/help.png" alt="" title="Help">
+                </div>
+
+                <div class="rec-str-buttons">
+                  <span>Reset</span>
+                  <img src="img/reset.png" alt="" title="Reset">
               </div>
-            </div>
+          </div>
+        </div>
 
             <div class="center">
                 <div class="match_time">
                   <table>
                     <tr>
-                      <td>
-                        <p>Event ID: &nbsp;1234567</p>
+                      <td rowspan="4" style="width: 24%;">
+                        <img src="img/zl-logo2.png" alt="">
+                      </td>
+                      <td  style="width: 30%; margin-right: 5px;">
+                        <p>Event ID: &nbsp;1234567 <br> Event Name: &nbsp;Soccer Match </p>
+                      </td>
+                      <td  style="width: 28%; padding-left: 15px;" >
+                          <p>Start: &nbsp; 21/10/2023 13:00 <br> Finish: &nbsp; 22/10/2023 15:00</p> 
                       </td>
                       <td>
-                        <p>Start: &nbsp; 21/10/2023 13:00 <br> Finish: &nbsp; 22/10/2023 15:00</p> 
-                      </td>
-                      <td>
-                        <p id="time"></p>
+                        <p id="time" style="text-align: center; padding-left: 20px;"></p>
                       </td>
                     </tr>
                     <tr>
-                      <td></td>
-                      <td></td>
                       <td>
-                        <div class="dropdown">
+                        <!-- <div class="dropdown">
                           <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                            <span>Link Activared Stream</span>
+                            <span>Link Activared Stream &nbsp;<strong>&#9759;</strong></span>
                             <i class="fa fa-caret-down"></i>
                           </button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -111,22 +168,29 @@
                             <li><a class="dropdown-item" href="#">Link 7</a></li>
                             <li><a class="dropdown-item" href="#">Link 8</a></li>
                           </ul>
-                        </div>
+                        </div> -->
                       </td>
                     </tr>
                   </table>
                 </div>
                 <div class="tabs-to-dropdown">
-                    <div class="nav-wrapper d-flex align-items-center justify-content-between">
+                    <div class="nav-wrapper d-flex align-items-center justify-content-between" 
+                        style="color: black !important; padding: 0px; padding-left: 33px;">
                       <ul class="nav nav-pills d-none d-md-flex" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="pills-prematch-tab" data-toggle="pill" href="#pills-prematch" role="tab" aria-controls="pills-prematch" aria-selected="false">PREMATCH</a>
+                          <a class="nav-link" id="pills-prematch-tab" data-toggle="pill" href="#pills-prematch" role="tab" aria-controls="pills-prematch" aria-selected="false">
+                            <label for="" class="step-number">1</label> &nbsp; PREMATCH
+                          </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="pills-match-tab" data-toggle="pill" href="#pills-match" role="tab" aria-controls="pills-match" aria-selected="false">MATCH</a>
+                          <a class="nav-link" id="pills-match-tab" data-toggle="pill" href="#pills-match" role="tab" aria-controls="pills-match" aria-selected="false">
+                            <label for="" class="step-number">2</label> &nbsp; MATCH
+                          </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="pills-pmatch-tab" data-toggle="pill" href="#pills-pmatch" role="tab" aria-controls="pills-pmatch" aria-selected="false">POST MATCH</a>
+                          <a class="nav-link" id="pills-pmatch-tab" data-toggle="pill" href="#pills-pmatch" role="tab" aria-controls="pills-pmatch" aria-selected="false">
+                            <label for="" class="step-number">3</label> &nbsp; POST MATCH
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -137,27 +201,59 @@
                            style="border: none;
                            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <form action="#">
-                            <div class="controllers_list">
-                              <label for="vehicle1"> OPENING COVER</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
-                              <label for="vehicle2"> STARTER LIST HOME</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> SUBSTITUTIONS LIST HOME</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle1"> FORMATIONS HOME</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
-                              <label for="vehicle2"> STARTER LIST AWAY</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> SUBSTITUTIONS LIST AWAY</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle1"> FORMATIONS AWAY</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
-                              <label for="vehicle2"> REFEREES</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> VAR REFEREES</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
+                          <form action="">
+                            <div class="tools">
+                            
+                              <ul class="list-group">                              
+                                <li class="list-group-item">
+                                  <div class="color-simpbol"></div>
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Opening Cover</label>
+                                  <input type="radio" id="opening_cover" name="options" value="opening_cover">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:orange"></div>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Starter List Home</label>
+                                  <input type="radio" id="starter_list_home" name="options" value="starter_list_home">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:orange"></div>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Substitution List Home</label>
+                                  <input type="radio" id="substitutions_list_home" name="options" value="substitutions_list_home">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:orange"></div>
+                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Formations Home</label>
+                                  <input type="radio" id="formations_home" name="options" value="formations_home">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol"  style="background-color:green"></div>
+                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Starter List Away</label>
+                                  <input type="radio" id="starter_list_away" name="options" value="starter_list_away">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:green"></div>
+                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Substitutions List Away</label>
+                                  <input type="radio" id="substitutions_list_away" name="options" value="substitutions_list_away">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:green"></div>
+                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp;Formations Away </label>
+                                  <input type="radio" id="formations_away" name="options" value="formations_away">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:#4688ff"></div>
+                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp;Referees </label>
+                                  <input type="radio" id="referees" name="options" value="referees">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:#4688ff"></div>
+                                  <label for="" class="step-number">9 &nbsp; &nbsp; &nbsp; VAR Referees</label>
+                                  <input type="radio" id="var_referees" name="options" value="var_referees">
+                                </li>
+                              </ul>
+                            
                             </div>
+                          
                             <div class="controllers">
                               <div class="btn-group">
                                 <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
@@ -165,42 +261,85 @@
                                 <input type="submit" value="ON LINE" class="btn btn-success" name="online">
                               </div>
                             </div>
-                          </form>
+                          </form>  
+
                         </div>
                       </div>
                       <!-- end of prematch controller -->
                       <div class="tab-pane fade" id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab"
                             style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <form action="#">
-                            <div class="controllers_list">
-                              <label for="vehicle1"> SCOREBOARD TIME FIRST HALF</label>
-                              <input type="checkbox" id="" name="" value="">
-                              <input type="button" value="START TIME" class="btn btn-success" name=""><br>
-                              <label for="vehicle2"> SCOREBOARD TIME SECOND HALF</label>
-                              <input type="checkbox" id="" name="" value="">
-                              <input type="button" value="START TIME" class="btn btn-success" name=""><br>
-                              <label for="vehicle3"> EXTRA TIME</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
-                              <label for="vehicle1"> YELLOW CARD HOME</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> 2 YELLOW CARD HOME</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> RED CARD HOME</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
-                              <label for="vehicle1"> YELLOW CARD AWAY</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> 2 YELLOW CARD AWAY</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> RED CARD AWAY</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
-                              <label for="vehicle2"> SUBSTITUTES HOME</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> SUBSTITUTES AWAY</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
-                              <label for="vehicle3"> SCOREBOARD TIME FIRST HALF</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
+
+
+
+
+                          <form action="">
+                            <div class="tools">
+                            
+                              <ul class="list-group">                              
+                                <li class="list-group-item">
+                                  <div class="color-simpbol"></div>
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Scoreboard Time First Half</label>
+                                  <input type="radio" id="SCOREBOARD_TIME_FIRST_HALF" name="options" value="SCOREBOARD_TIME_FIRST_HALF">
+                                  <input type="button" value="Start Time" class="btn btn-success" name="" 
+                                         style="margin-left: 20px; position: absolute; right: 4px;">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" ></div>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Scoreboard Time First Half</label>
+                                  <input type="radio" id="SCOREBOARD_TIME_SECOND_HALF" name="options" value="SCOREBOARD_TIME_SECOND_HALF">
+                                  <input type="button" value="Start Time" class="btn btn-success" name="" 
+                                         style="margin-left: 20px; position: absolute; right: 4px;">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" ></div>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Extra Time</label>
+                                  <input type="radio" id="EXTRA_TIME" name="options" value="EXTRA_TIME">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:orange"></div>
+                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Yellow Card Home</label>
+                                  <input type="radio" id="YELLOW_CARD_HOME" name="options" value="YELLOW_CARD_HOME">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol"  style="background-color:orange"></div>
+                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; 2 Yellow Card Home</label>
+                                  <input type="radio" id="2YELLOW_CARD_HOME" name="options" value="2YELLOW_CARD_HOME">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:orange"></div>
+                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Red  Card Home</label>
+                                  <input type="radio" id="RED_CARD_HOME" name="options" value="RED_CARD_HOME">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:green"></div>
+                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp;Yellow Card Away </label>
+                                  <input type="radio" id="YELLOW_CARD_AWAY" name="options" value="YELLOW_CARD_AWAY">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:green"></div>
+                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp;2 Yellow Card Away </label>
+                                  <input type="radio" id="2YELLOW_CARD_AWAY" name="options" value="2YELLOW_CARD_AWAY">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:green"></div>
+                                  <label for="" class="step-number">9 &nbsp; &nbsp; &nbsp; Red  Card Away</label>
+                                  <input type="radio" id="RED_CARD_AWAY" name="options" value="RED_CARD_AWAY">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:#4688ff"></div>
+                                  <label for="" class="step-number">10  &nbsp; &nbsp; Substitutes Home</label>
+                                  <input type="radio" id="SUBSTITUTES_HOME" name="options" value="SUBSTITUTES_HOME">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:#4688ff"></div>
+                                  <label for="" class="step-number">11  &nbsp; &nbsp; Substitutes Away</label>
+                                  <input type="radio" id="" name="SUBSTITUTES_AWAY" value="SUBSTITUTES_AWAY">
+                                </li>
+                              </ul>
+                            
                             </div>
+                          
                             <div class="controllers">
                               <div class="btn-group">
                                 <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
@@ -208,7 +347,8 @@
                                 <input type="submit" value="ON LINE" class="btn btn-success" name="online">
                               </div>
                             </div>
-                          </form>
+                          </form>                            
+                          
                         </div>
                       </div>
                       <!-- end of match controller -->
@@ -216,19 +356,39 @@
                            style="border: none;
                            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <form action="#">
-                            <div class="controllers_list">
-                              <label for="vehicle1"> SCOREBOARD FINAL</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
-                              <label for="vehicle2"> CORNER HOME</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CORNER AWAY</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
-                              <label for="vehicle2"> FOULS HOME</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> FOULS AWAY</label>
-                              <input type="checkbox" id="" name="" value=""><br>
+                          <form action="">
+                            <div class="tools">
+                            
+                              <ul class="list-group">                              
+                                <li class="list-group-item">
+                                  <div class="color-simpbol"></div>
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Scoreboard Final</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="SCOREBOARD_FINAL">
+                                </li>
+                                
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:orange"></div>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Corner Home</label>
+                                  <input type="radio" id="CORNER_HOME" name="options" value="CORNER_HOME">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:orange"></div>
+                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Corner Away</label>
+                                  <input type="radio" id="CORNER_AWAY" name="options" value="CORNER_AWAY">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol"  style="background-color:green"></div>
+                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Fouls Home</label>
+                                  <input type="radio" id="FOULS_HOME" name="options" value="FOULS_HOME">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color:green"></div>
+                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Fouls Away</label>
+                                  <input type="radio" id="FOULS_AWAY" name="options" value="FOULS_AWAY">
+                                </li>
+                              </ul>
                             </div>
+                          
                             <div class="controllers">
                               <div class="btn-group">
                                 <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
@@ -245,25 +405,54 @@
                            style="border: none;
                            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <form action="#">
-                            <div class="controllers_list">
-                              <label for="vehicle1"> CAM 1</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 2</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 3</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 4</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 5</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 6</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 7</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 8</label>
-                              <input type="checkbox" id="" name="" value=""><br>
+                          <form action="">
+                            <div class="tools">
+                            
+                              <ul class="list-group">                              
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Camera 1</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Camera 2</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Camera 3</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #4688ff;"></div>
+                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Camera 4</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #8142e9;"></div>
+                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Camera 5</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Camera 6</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp; Camera 7</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp; Camera 8</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                
+                              </ul>
                             </div>
+                          
                             <div class="controllers">
                               <div class="btn-group">
                                 <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
@@ -279,24 +468,52 @@
                            style="border: none;
                            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <form action="#">
-                            <div class="controllers_list">
-                              <label for="vehicle1"> CAM 1</label>
-                              <input type="checkbox" checked data-toggle="toggle" data-size="sm"><br>
-                              <label for="vehicle2"> CAM 2</label>
-                              <input type="checkbox" checked data-toggle="toggle" data-size="sm"><br>
-                              <label for="vehicle3"> CAM 3</label>
-                              <input type="checkbox" checked data-toggle="toggle" data-size="sm"><br>
-                              <label for="vehicle2"> CAM 4</label>
-                              <input type="checkbox" checked data-toggle="toggle" data-size="sm"><br>
-                              <label for="vehicle3"> CAM 5</label>
-                              <input type="checkbox" checked data-toggle="toggle" data-size="sm"><br>
-                              <label for="vehicle3"> CAM 6</label>
-                              <input type="checkbox" checked data-toggle="toggle" data-size="sm"><br>
-                              <label for="vehicle2"> CAM 7</label>
-                              <input type="checkbox" checked data-toggle="toggle" data-size="sm"><br>
-                              <label for="vehicle3"> CAM 8</label>
-                              <input type="checkbox" checked data-toggle="toggle" data-size="sm"><br>
+                          <form action="">
+                            <div class="tools">
+                            
+                              <ul class="list-group">                              
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Audio 1</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Audio 2</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Audio 3</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #4688ff;"></div>
+                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Audio 4</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #8142e9;"></div>
+                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Audio 5</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Audio 6</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp; Audio 7</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp; Audio 8</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                
+                              </ul>
                             </div>
                           </form>
                         </div>
@@ -306,25 +523,53 @@
                            style="border: none;
                            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <form action="#">
-                            <div class="controllers_list">
-                              <label for="vehicle1"> CAM 1</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 2</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 3</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 4</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 5</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 6</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 7</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 8</label>
-                              <input type="checkbox" id="" name="" value=""><br>
+                          <form action="">
+                            <div class="tools">
+                            
+                              <ul class="list-group">                              
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Call 1</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Call 2</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Call 3</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #4688ff;"></div>
+                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Call 4</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #8142e9;"></div>
+                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Call 5</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Call 6</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp; Call 7</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp; Call 8</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                              </ul>
                             </div>
+                          
                             <div class="controllers">
                               <div class="btn-group">
                                 <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
@@ -349,8 +594,47 @@
                       <div class="tab-pane fade" id="pills-production" role="tabpanel" aria-labelledby="pills-production-tab"
                             style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <h2 class="mb-3 font-weight-bold">production button</h2>
-                          hello there I am for production button
+                          <form action="">
+                            <div class="tools">
+                            
+                              <ul class="list-group">                              
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Video 1</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Video 2</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Video 3</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #4688ff;"></div>
+                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Video 4</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #8142e9;"></div>
+                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Video 5</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                
+                              </ul>
+                            </div>
+                          
+                            <div class="controllers">
+                              <div class="btn-group">
+                                <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
+                                <input type="submit" value="RESET" class="btn btn-warning" name="reset">
+                                <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                              </div>
+                            </div>
+                          </form>
                         </div>
                       </div>
 
@@ -359,15 +643,27 @@
                            style="border: none;
                            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <form action="#">
-                            <div class="controllers_list">
-                              <label for="vehicle1"> BANNER UP SCREBOARD</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
-                              <label for="vehicle2"> BANNER OVERLYING SCOREBOARD</label>
-                              <input type="checkbox" id="" name="" value=""><br><br>
-                              <label for="vehicle3"> BANNER DOWN SCREBOARD</label>
-                              <input type="checkbox" id="" name="" value="">
-                            </div>
+                          <form action="">
+                            <div class="tools">
+                            
+                              <ul class="list-group">                              
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Banner up Scoreboard</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Banner overlaying Scoreboard</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Banner down Scoreboard</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                              </ul>
+                            </div>    
                             <div class="controllers">
                               <div class="btn-group">
                                 <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
@@ -384,24 +680,51 @@
                            style="border: none;
                            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <form action="#">
-                            <div class="controllers_list">
-                              <label for="vehicle1"> CAM 1</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 2</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 3</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 4</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 5</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 6</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 7</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 8</label>
-                              <input type="checkbox" id="" name="" value=""><br>
+                          <form action="">
+                            <div class="tools">
+                            
+                              <ul class="list-group">                              
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Fade</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Wipe</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Fly</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #4688ff;"></div>
+                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Zoom</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #8142e9;"></div>
+                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Cube</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Cross Zoom</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp; Cube</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp; Cube Zoom</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                              </ul>
                             </div>
                             <div class="controllers">
                               <div class="btn-group">
@@ -416,30 +739,57 @@
                            style="border: none;
                            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <form action="#">
-                            <div class="controllers_list">
-                              <label for="vehicle1"> CAM 1</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 2</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 3</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 4</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 5</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 6</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle2"> CAM 7</label>
-                              <input type="checkbox" id="" name="" value=""><br>
-                              <label for="vehicle3"> CAM 8</label>
-                              <input type="checkbox" id="" name="" value=""><br>
+                          <form action="">
+                            <div class="tools">
+                            
+                              <ul class="list-group">                              
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Camera 1</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Camera 2</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Camera 3</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #4688ff;"></div>
+                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Camera 4</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: #8142e9;"></div>
+                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Camera 5</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: red;"></div>
+                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Camera 6</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: orange;"></div>
+                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp; Camera 7</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="color-simpbol" style="background-color: green;"></div>
+                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp; Camera 8</label>
+                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                </li>
+                              </ul>
                             </div>
                             <div class="controllers">
                               <div class="btn-group" style="display: flex;">
 
                                 <table>
-                                  <tr>
+                                  <!-- <tr>
                                     <td class="btn btn-light"
                                     style="display: flex;
                                     align-items: center;
@@ -474,6 +824,41 @@
                                     </td>
                                     <td><input type="submit" value="SPEED 50%" class="btn btn-warning" name=""></td>
                                     <td><input type="submit" value="SPEED 100%" class="btn btn-warning" name=""></td>
+                                  </tr> -->
+                                  <tr>
+                                    <td>
+                                      
+                                    </td>
+                                    <td>
+                                      <input type="submit" value="Mark -10s" class="btn btn-success" name="online">
+                                    </td>
+                                    <td rowspan="2"  style="width: 80px;"></td>
+                                    <td>
+                                      
+                                    </td>
+                                    <td>
+                                      <input type="submit" value="Speed 0" class="btn btn-warning" name="reset">
+                                    </td>
+                                    <td>
+                                      <input type="submit" value="Speed 25%" class="btn btn-warning" name="reset">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <input type="submit" value="Start/Stop" class="btn btn-danger" name="preview">
+                                    </td>
+                                    <td>
+                                      <input type="submit" value="Mark -20s" class="btn btn-success" name="online">
+                                    </td>
+                                    <td>
+                                      <input type="submit" value="Last Marker" class="btn btn-danger" name="preview">
+                                    </td>
+                                    <td>
+                                      <input type="submit" value="Speed 50%" class="btn btn-warning" name="reset">
+                                    </td>
+                                    <td>
+                                      <input type="submit" value="Speed 100%" class="btn btn-warning" name="reset">
+                                    </td>
                                   </tr>
                                 </table>
                               </div>
@@ -484,18 +869,31 @@
                       <div class="tab-pane fade" id="pills-title" role="tabpanel" aria-labelledby="pills-title-tab"
                             style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <h2 class="mb-3 font-weight-bold">Title</h2>
-                          hello there I am for title
+                          <div style="position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            text-align: center;">
+                              <h1>COMING SOON</h1>
+                              <hr class="line_coming">
+                            </div>
                         </div>
                       </div>
                       <div class="tab-pane fade" id="pills-virset" role="tabpanel" aria-labelledby="pills-virset-tab"
                             style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
                         <div class="container-fluid">
-                          <h2 class="mb-3 font-weight-bold">Virtual set</h2>
-                          hello there I am for Virtual set
+                          
+                            <div style="position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            text-align: center;">
+                              <h1>COMING SOON</h1>
+                              <hr class="line_coming">
+                            </div>
+                          
                         </div>
                       </div>
-                      <!-- end of new tab pane for test -->
             
                     </div>
                 </div>
@@ -505,60 +903,79 @@
                 <video src="video/1.mp4" controls></video>
               </div>
               <div class="command">
-                <header>
+                <header style="text-align: right; padding-right: 10px;">
                   SPECIAL COMMAND AREA
                 </header>
                 <!-- special commands area -->
+                
                 <div class="tools">
-                  <div class="nav-wrapper d-flex align-items-center justify-content-between">
-                    <ul class="nav nav-pills d-none d-md-flex" id="pills-tab" role="tablist">
-                      <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-effect-tab" data-toggle="pill" href="#pills-effect" role="tab" aria-controls="pills-effect" aria-selected="false">
-                          <img src="img/t-effect.png" alt="">
+                   <div class="nav-wrapper">
+
+                      <ul class="list-group" style="direction:rtl;">
+                        <a onfocus="background('pills-effect-tab');" class="nav-links" id="pills-effect-tab" data-toggle="pill" href="#pills-effect" role="tab" aria-controls="pills-effect" aria-selected="false">
+                          <li class="list-group-item">
+                            <div class="color-simpbol"></div>
+                            <img src="img/tr-effect.png" alt="" title="">
+                            <span>Transition Effect</span>
+                          </li>
                         </a>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-replay-tab" data-toggle="pill" href="#pills-replay" role="tab" aria-controls="pills-replay" aria-selected="false">
-                          <img src="img/in-replay.png" alt="">
+                        <a onfocus="background('pills-replay-tab');" class="nav-links" id="pills-replay-tab" data-toggle="pill" href="#pills-replay" role="tab" aria-controls="pills-replay" aria-selected="false">
+                          <li class="list-group-item">
+                            <div class="color-simpbol" style="background-color:orange;"></div>
+                            <img src="img/in-replay.png" alt="" title="Help">
+                            <span>Instant Replay</span>
+                          </li>
+                        </a>  
+                        <a onfocus="background('pills-title-tab');" class="nav-links" id="pills-title-tab" data-toggle="pill" href="#pills-title" role="tab" aria-controls="pills-title" aria-selected="false">
+                          <li class="list-group-item">
+                            <div class="color-simpbol" style="background-color:green ;"></div>
+                            <img src="img/title.png" alt="" title="Help">
+                            <span>Title</span>
+                          </li>
+                        </a>  
+                        <a onfocus="background('pills-virset-tab');" class="nav-links" id="pills-virset-tab" data-toggle="pill" href="#pills-virset" role="tab" aria-controls="pills-virset" aria-selected="false">
+                          <li class="list-group-item">
+                            <div class="color-simpbol" style="background-color: #4688ff;"></div>
+                            <img src="img/virtual-set2-removebg-preview.png" alt="" title="Help">
+                            <span>Virtual Set</span>
+                          </li>
                         </a>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-title-tab" data-toggle="pill" href="#pills-title" role="tab" aria-controls="pills-title" aria-selected="false">
-                          <img src="img/title.png" alt="">
-                        </a>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-virset-tab" data-toggle="pill" href="#pills-virset" role="tab" aria-controls="pills-virset" aria-selected="false">
-                          <img src="img/virtual-set.png" alt="">
-                        </a>
-                      </li>
-                    </ul>
+                      </ul>
+                    </div>
                   </div>
-                </div>
                 <!-- End of the special commands area -->
               </div>
-              <div class="app_buttons">
-                <table>
-                  <tr>
-                    <td>
-                      <label for="">STREAMING</label>
-                    </td>
-                    <td style="margin-right: 10px;">
-                      <button id="strButton" style="margin: 0px; margin-left: 2px;"></button>
-                    </td>
-                    <td style="width: 35px;"></td>
-                    <td>
-                      <label for="">RECORDING</label>
-                    </td>
-                    <td>
-                      <button id="recButton" style="margin: 0px; margin-left: 2px;"></button>
-                    </td>
-                  </tr>
-                </table>
+              <div class="app_buttons" style="direction: rtl; font-size: 16px;">
+                <div class="rec-str-buttons" style="margin-left: 20px;">
+                    <span>Streaming</span>
+                    <button id="strButton"></button>
+                </div>
+                
+                <div class="rec-str-buttons">
+                    <span>Recording</span>
+                    <button id="recButton"></button>
+                </div>
               </div>
             </div>
         </div>
     </div>
+
+    <!-- A tags background after clicking -->
+    <script>
+      function background(clickedTabId) {
+        // Reset the color for all links
+        var links = document.querySelectorAll('.nav-links');
+        links.forEach(function(link) {
+          link.style.fontWeight = "";
+          link.style.color = "";
+        });
+
+        // Apply red color to the clicked link
+        var links = document.getElementById(clickedTabId);
+        links.style.fontWeight = "bold";
+        links.style.color = "blue";
+      }
+    </script>
 
     <!-- Time -->
     <script>
@@ -576,7 +993,7 @@
             const time = `${hours}:${minutes}:${seconds}`;
 
             const clockElement = document.getElementById('time');
-            clockElement.innerHTML = `${formattedDate}&nbsp;&nbsp;&nbsp${time}`;
+            clockElement.innerHTML = `${formattedDate}<br/>${time}`;
         }
 
         // Update the clock immediately
@@ -586,46 +1003,40 @@
         setInterval(updateClock, 1000);
     </script>
 
-    <!-- Streaming and Recording buttons -->
+    <!-- Streaming and Recording buttons  -->
     <script>
-      $('#recButton').addClass("notRec");
+      const button = document.getElementById("recButton");
+      let isClicked1 = false;
 
-      $('#recButton').click(function(){
-        if($('#recButton').hasClass('notRec')){
-          $('#recButton').removeClass("notRec");
-          $('#recButton').addClass("Rec");
+      button.addEventListener("click", function () {
+        if (isClicked1) {
+          // Change the background color back to its previous color (e.g., green)
+          button.style.backgroundColor = "green";
+        } else {
+          // Change the background color to the new color (e.g., red)
+          button.style.backgroundColor = "red";
         }
-        else{
-          $('#recButton').removeClass("Rec");
-          $('#recButton').addClass("notRec");
-        }
-      });	
 
-      $('#strButton').addClass("notRec");
+        // Toggle the clicked state
+        isClicked1 = !isClicked1;
+      });
 
-      $('#strButton').click(function(){
-        if($('#strButton').hasClass('notRec')){
-          $('#strButton').removeClass("notRec");
-          $('#strButton').addClass("Rec");
-        }
-        else{
-          $('#strButton').removeClass("Rec");
-          $('#strButton').addClass("notRec");
-        }
-      });	
+      const strbutton = document.getElementById("strButton");
+      let isClicked = false;
 
-      $('#replayButton').addClass("notRec");
+      strbutton.addEventListener("click", function () {
+        if (isClicked) {
+          // Change the background color back to its previous color (e.g., green)
+          strbutton.style.backgroundColor = "green";
+        } else {
+          // Change the background color to the new color (e.g., red)
+          strbutton.style.backgroundColor = "red";
+        }
 
-      $('#replayButton').click(function(){
-        if($('#replayButton').hasClass('notRec')){
-          $('#replayButton').removeClass("notRec");
-          $('#replayButton').addClass("Rec");
-        }
-        else{
-          $('#replayButton').removeClass("Rec");
-          $('#replayButton').addClass("notRec");
-        }
-      });	
+        // Toggle the clicked state
+        isClicked = !isClicked;
+      });
     </script>
+   
 </body>
 </html>
