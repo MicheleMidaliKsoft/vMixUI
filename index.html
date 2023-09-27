@@ -62,9 +62,13 @@
         <div class="main">
             <!-- left dashboard (time board) -->
             <div class="left">
+
               <div class="video">
-                <video src="video/1.mp4" controls></video>
-              </div>
+                <div><video  class="monitor" src="video/1.mp4" controls></video></div>
+                <div class="monitor-title" style="background-color: #ff8c00; color: white;">
+                  <p>PREVIEW</p>
+                </div>
+
               <div class="command">
                 <header style="text-align: left; padding-left: 10px;">
                   BASIC COMMAND AREA
@@ -73,35 +77,35 @@
                   <div class="tabs-to-dropdown">
                     <div class="tools">
                       <ul class="list-group">
-                        <a onfocus="background('pills-virset-tab');" class="nav-links" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false">
+                        <a onfocus="background('pills-video-tab');" class="nav-links" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false">
                           <li class="list-group-item">
                             <div class="color-simpbol"></div>
                             <img src="img/video-camera.png" alt="" title="">
                             <span>Video</span>
                           </li>
                         </a>
-                        <a onfocus="background('pills-virset-tab');" class="nav-links" id="pills-audio-tab" data-toggle="pill" href="#pills-audio" role="tab" aria-controls="pills-audio" aria-selected="false">
+                        <a onfocus="background('pills-audio-tab');" class="nav-links" id="pills-audio-tab" data-toggle="pill" href="#pills-audio" role="tab" aria-controls="pills-audio" aria-selected="false">
                           <li class="list-group-item">
                             <div class="color-simpbol" style="background-color:orange;"></div>
                             <img src="img/audio.png" alt="" title="Help">
                             <span>Audio</span>
                           </li>
                         </a>
-                        <a onfocus="background('pills-virset-tab');" class="nav-links" id="pills-vcall-tab" data-toggle="pill" href="#pills-vcall" role="tab" aria-controls="pills-vcall" aria-selected="false">
+                        <a onfocus="background('pills-vcall-tab');" class="nav-links" id="pills-vcall-tab" data-toggle="pill" href="#pills-vcall" role="tab" aria-controls="pills-vcall" aria-selected="false">
                           <li class="list-group-item">
                             <div class="color-simpbol" style="background-color:green ;"></div>
                             <img src="img/call2.png" alt="" title="Help">
                             <span>vMix Call</span>
                           </li>
                         </a>  
-                        <a onfocus="background('pills-virset-tab');" class="nav-links" id="pills-production-tab" data-toggle="pill" href="#pills-production" role="tab" aria-controls="pills-production" aria-selected="false">
+                        <a onfocus="background('pills-production-tab');" class="nav-links" id="pills-production-tab" data-toggle="pill" href="#pills-production" role="tab" aria-controls="pills-production" aria-selected="false">
                           <li class="list-group-item">
                             <div class="color-simpbol" style="background-color: #4688ff;"></div>
                             <img src="img/production.png" alt="" title="Help">
-                            <span>Production (Mixer)</span>
+                            <span>Components for Production</span>
                           </li>
                         </a>  
-                        <a onfocus="background('pills-virset-tab');" class="nav-links" id="pills-marketing-tab" data-toggle="pill" href="#pills-marketing" role="tab" aria-controls="pills-marketing" aria-selected="false">
+                        <a onfocus="background('pills-marketing-tab');" class="nav-links" id="pills-marketing-tab" data-toggle="pill" href="#pills-marketing" role="tab" aria-controls="pills-marketing" aria-selected="false">
                           <li class="list-group-item">
                             <div class="color-simpbol" style="background-color: #8142e9"></div>
                             <img src="img/marketing.png" alt="" title="Help">
@@ -131,7 +135,10 @@
                   <span>Reset</span>
                   <img src="img/reset.png" alt="" title="Reset">
               </div>
-          </div>
+            </div>
+            
+           </div>
+            <!-- End of Left Part -->
         </div>
 
             <div class="center">
@@ -176,19 +183,19 @@
                 <div class="tabs-to-dropdown">
                     <div class="nav-wrapper d-flex align-items-center justify-content-between" 
                         style="color: black !important; padding: 0px; padding-left: 33px;">
-                      <ul class="nav nav-pills d-none d-md-flex" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="pills-prematch-tab" data-toggle="pill" href="#pills-prematch" role="tab" aria-controls="pills-prematch" aria-selected="false">
+                      <ul class="nav d-none d-md-flex" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation"  style="float: left !important; margin-left: 35px;">
+                          <a onfocus="background('pills-prematch-tab');" class="nav-links" id="pills-prematch-tab" data-toggle="pill" href="#pills-prematch" role="tab" aria-controls="pills-prematch" aria-selected="false">   <!-- style="background-color: transparent !important;" -->
                             <label for="" class="step-number">1</label> &nbsp; PREMATCH
                           </a>
                         </li>
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="pills-match-tab" data-toggle="pill" href="#pills-match" role="tab" aria-controls="pills-match" aria-selected="false">
+                        <li class="nav-item" role="presentation" style="float: left !important; margin-left: 35px;">
+                          <a onfocus="background('pills-match-tab');" class="nav-links" id="pills-match-tab" data-toggle="pill" href="#pills-match" role="tab" aria-controls="pills-match" aria-selected="false">
                             <label for="" class="step-number">2</label> &nbsp; MATCH
                           </a>
                         </li>
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link" id="pills-pmatch-tab" data-toggle="pill" href="#pills-pmatch" role="tab" aria-controls="pills-pmatch" aria-selected="false">
+                        <li class="nav-item" role="presentation" style="float: left !important; margin-left: 35px;">
+                          <a onfocus="background('pills-pmatch-tab');" class="nav-links" id="pills-pmatch-tab" data-toggle="pill" href="#pills-pmatch" role="tab" aria-controls="pills-pmatch" aria-selected="false">
                             <label for="" class="step-number">3</label> &nbsp; POST MATCH
                           </a>
                         </li>
@@ -474,43 +481,51 @@
                               <ul class="list-group">                              
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: red;"></div>
-                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Audio 1</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Audio Camera 1</label>
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
+                                         style="position: absolute; right: 280px;">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: orange;"></div>
-                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Audio 2</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Audio Camera 2</label>
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
+                                         style="position: absolute; right: 280px;">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: green;"></div>
-                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Audio 3</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Audio Camera 3</label>
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
+                                         style="position: absolute; right: 280px;">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: #4688ff;"></div>
-                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Audio 4</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Audio Camera 4</label>
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
+                                         style="position: absolute; right: 280px;">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: #8142e9;"></div>
-                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Audio 5</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Audio Camera 5</label>
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
+                                         style="position: absolute; right: 280px;">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: red;"></div>
-                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Audio 6</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Audio Camera 6</label>
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
+                                         style="position: absolute; right: 280px;">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: orange;"></div>
-                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp; Audio 7</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp; Audio Camera 7</label>
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
+                                         style="position: absolute; right: 280px;">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: green;"></div>
-                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp; Audio 8</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp; Audio Camera 8</label>
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
+                                         style="position: absolute; right: 280px;">
                                 </li>
                                 
                               </ul>
@@ -529,42 +544,42 @@
                               <ul class="list-group">                              
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: red;"></div>
-                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Call 1</label>
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Call 1 - 1234567890</label>
                                   <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: orange;"></div>
-                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Call 2</label>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Call 2 - 1234567890</label>
                                   <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: green;"></div>
-                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Call 3</label>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Call 3 - 1234567890</label>
                                   <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: #4688ff;"></div>
-                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Call 4</label>
+                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Call 4 - 1234567890</label>
                                   <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: #8142e9;"></div>
-                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Call 5</label>
+                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Call 5 - 1234567890</label>
                                   <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: red;"></div>
-                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Call 6</label>
+                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Call 6 - 1234567890</label>
                                   <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: orange;"></div>
-                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp; Call 7</label>
+                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp; Call 7 - 1234567890</label>
                                   <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: green;"></div>
-                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp; Call 8</label>
+                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp; Call 8 - 1234567890</label>
                                   <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
                                 </li>
                               </ul>
@@ -745,119 +760,55 @@
                               <ul class="list-group">                              
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: red;"></div>
-                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Camera 1</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
+                                  <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Program on Live</label>
+                                  <input type="radio" id="" name="options" value="">
                                 </li>
-                                <li class="list-group-item">
-                                  <div class="color-simpbol" style="background-color: orange;"></div>
-                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Camera 2</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
-                                </li>
-                                <li class="list-group-item">
-                                  <div class="color-simpbol" style="background-color: green;"></div>
-                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Camera 3</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
-                                </li>
-                                <li class="list-group-item">
-                                  <div class="color-simpbol" style="background-color: #4688ff;"></div>
-                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Camera 4</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
-                                </li>
-                                <li class="list-group-item">
-                                  <div class="color-simpbol" style="background-color: #8142e9;"></div>
-                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Camera 5</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
-                                </li>
-                                <li class="list-group-item">
-                                  <div class="color-simpbol" style="background-color: red;"></div>
-                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Camera 6</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
-                                </li>
-                                <li class="list-group-item">
-                                  <div class="color-simpbol" style="background-color: orange;"></div>
-                                  <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp; Camera 7</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
-                                </li>
-                                <li class="list-group-item">
-                                  <div class="color-simpbol" style="background-color: green;"></div>
-                                  <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp; Camera 8</label>
-                                  <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
-                                </li>
+                                
                               </ul>
                             </div>
                             <div class="controllers">
                               <div class="btn-group" style="display: flex;">
 
                                 <table>
-                                  <!-- <tr>
-                                    <td class="btn btn-light"
-                                    style="display: flex;
-                                    align-items: center;
-                                    justify-content: center; 
-                                    color: black; 
-                                    font-weight: bold;
-                                    background-color: white;
-                                    margin-right: 30px;
-                                    padding-top: 5px;
-                                    width: 180px;
-                                    ">
-                                      <label for="">INSTANT REPLAY</label>
-                                      <button id="replayButton" class="replay"></button>
+                                  <tr>
+                                    <td></td>
+                                    <td style="width: 80px;"></td>
+                                    <td>
+                                      <input type="submit" value="Last Mark ONLIVE" class="btn btn-danger" name="preview">
                                     </td>
-                                    <td colspan="2">
-                                      <input type="submit" value="PLAY LAST MARKER" class="btn btn-danger" name="" 
-                                             style="width: 170px; height: 45px; margin-bottom: 20px;">
+                                  </tr> 
+                                  <tr>
+                                    <td></td>
+                                    <td style="width: 80px;"></td>
+                                    <td>
+                                      <input type="submit" value="Replay Speed Freeze" class="btn btn-warning" name="reset">
+                                    </td>
+                                  </tr> 
+                                  <tr>
+                                    <td>
+                                      <input type="submit" value="Start/Stop Instant Replay" class="btn btn-danger" name="preview">
+                                    </td>
+                                    <td style="width: 80px;"></td>
+                                    <td>
+                                      <input type="submit" value="Replay Speed 25%" class="btn btn-warning" name="reset">
                                     </td>
                                   </tr>
                                   <tr>
                                     <td>
-                                      <input type="submit" value="MARK - 10s" class="btn btn-success" name="">
+                                      <input type="submit" value="Mark Replay-10s" class="btn btn-success" name="online">
                                     </td>
+                                    <td style="width: 80px;"></td>
                                     <td>
-                                      <input type="submit" value="SPEED 0" class="btn btn-warning" name="">
-                                    </td>
-                                    <td><input type="submit" value="SPEED 25%" class="btn btn-warning" name="">
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <input type="submit" value="MARK - 20s" class="btn btn-success" name="">
-                                    </td>
-                                    <td><input type="submit" value="SPEED 50%" class="btn btn-warning" name=""></td>
-                                    <td><input type="submit" value="SPEED 100%" class="btn btn-warning" name=""></td>
-                                  </tr> -->
-                                  <tr>
-                                    <td>
-                                      
-                                    </td>
-                                    <td>
-                                      <input type="submit" value="Mark -10s" class="btn btn-success" name="online">
-                                    </td>
-                                    <td rowspan="2"  style="width: 80px;"></td>
-                                    <td>
-                                      
-                                    </td>
-                                    <td>
-                                      <input type="submit" value="Speed 0" class="btn btn-warning" name="reset">
-                                    </td>
-                                    <td>
-                                      <input type="submit" value="Speed 25%" class="btn btn-warning" name="reset">
+                                      <input type="submit" value="Replay Speed 50%" class="btn btn-warning" name="reset">
                                     </td>
                                   </tr>
                                   <tr>
                                     <td>
-                                      <input type="submit" value="Start/Stop" class="btn btn-danger" name="preview">
+                                      <input type="submit" value="Mark Replay-20s" class="btn btn-success" name="online">
                                     </td>
+                                    <td style="width: 80px;"></td>
                                     <td>
-                                      <input type="submit" value="Mark -20s" class="btn btn-success" name="online">
-                                    </td>
-                                    <td>
-                                      <input type="submit" value="Last Marker" class="btn btn-danger" name="preview">
-                                    </td>
-                                    <td>
-                                      <input type="submit" value="Speed 50%" class="btn btn-warning" name="reset">
-                                    </td>
-                                    <td>
-                                      <input type="submit" value="Speed 100%" class="btn btn-warning" name="reset">
+                                      <input type="submit" value="Replay Real Speed" class="btn btn-warning" name="reset">
                                     </td>
                                   </tr>
                                 </table>
@@ -899,8 +850,11 @@
                 </div>
             </div>
             <div class="right">
-              <div class="video">
-                <video src="video/1.mp4" controls></video>
+              <div class="video" style="direction: rtl;">
+                <div><video  class="monitor" src="video/1.mp4" controls></video></div>
+                <div class="monitor-title" style="background-color: #006400; color: white;">
+                  <p>ON LIVE</p>
+                </div
               </div>
               <div class="command">
                 <header style="text-align: right; padding-right: 10px;">
@@ -948,12 +902,12 @@
               <div class="app_buttons" style="direction: rtl; font-size: 16px;">
                 <div class="rec-str-buttons" style="margin-left: 20px;">
                     <span>Streaming</span>
-                    <button id="strButton"></button>
+                    <button id="strButton" style="background-color: green;"></button>
                 </div>
                 
                 <div class="rec-str-buttons">
                     <span>Recording</span>
-                    <button id="recButton"></button>
+                    <button id="recButton" style="background-color: red;"></button>
                 </div>
               </div>
             </div>
@@ -1005,37 +959,67 @@
 
     <!-- Streaming and Recording buttons  -->
     <script>
-      const button = document.getElementById("recButton");
-      let isClicked1 = false;
+      // const button = document.getElementById("recButton");
+      // let isClicked1 = false;
 
-      button.addEventListener("click", function () {
-        if (isClicked1) {
-          // Change the background color back to its previous color (e.g., green)
-          button.style.backgroundColor = "green";
-        } else {
-          // Change the background color to the new color (e.g., red)
-          button.style.backgroundColor = "red";
-        }
+      // button.addEventListener("click", function () {
+      //   if (isClicked1) {
+      //     // Change the background color back to its previous color (e.g., green)
+      //     button.style.backgroundColor = "red";
+      //   } else {
+      //     // Change the background color to the new color (e.g., red)
+      //     button.style.backgroundColor = "yellow";
+      //   }
 
-        // Toggle the clicked state
-        isClicked1 = !isClicked1;
-      });
+      //   // Toggle the clicked state
+      //   isClicked1 = !isClicked1;
+      // });
 
-      const strbutton = document.getElementById("strButton");
-      let isClicked = false;
+      // const strbutton = document.getElementById("strButton");
+      // let isClicked = false;
 
-      strbutton.addEventListener("click", function () {
-        if (isClicked) {
-          // Change the background color back to its previous color (e.g., green)
-          strbutton.style.backgroundColor = "green";
-        } else {
-          // Change the background color to the new color (e.g., red)
-          strbutton.style.backgroundColor = "red";
-        }
+      // strbutton.addEventListener("click", function () {
+      //   if (isClicked) {
+      //     // Change the background color back to its previous color (e.g., green)
+      //     strbutton.style.backgroundColor = "green";
+      //   } else {
+      //     // Change the background color to the new color (e.g., red)
+      //     strbutton.style.backgroundColor = "red";
+      //   }
 
-        // Toggle the clicked state
-        isClicked = !isClicked;
-      });
+      //   // Toggle the clicked state
+      //   isClicked = !isClicked;
+      // });
+
+
+      
+    function blinkButton(button) {
+        let originalColor = button.style.backgroundColor;
+        let newColor = "black"; // You can change this to the desired blink color
+
+        let isBlinking = false;
+        let blinkInterval;
+
+        button.addEventListener("click", function () {
+            if (!isBlinking) {
+                isBlinking = true;
+                blinkInterval = setInterval(function () {
+                    button.style.backgroundColor = button.style.backgroundColor === originalColor ? newColor : originalColor;
+                }, 500); // Adjust the interval (milliseconds) for the blink speed
+            } else {
+                clearInterval(blinkInterval);
+                button.style.backgroundColor = originalColor;
+                isBlinking = false;
+            }
+        });
+    }
+
+    const recButton = document.getElementById("recButton");
+    const strButton = document.getElementById("strButton");
+
+    blinkButton(recButton);
+    blinkButton(strButton);
+
     </script>
    
 </body>

@@ -41,27 +41,30 @@
     height: 280px; */
     width: 403.2px;
     height: 226.8px;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
+    
 }
-.video video{
+.video .monitor{
     width: 403.2px;
     height: 226.8px;
+}
+.monitor-title{
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .command{
     width: 100%;
-    height: 397px;   
+    height: 373px;   
 }
 .command header {
     padding: 10px;
     font-size: large;
     margin-bottom: 1px;
     color: black;
-    background-color: #f3f4f6;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-.left .command header {
-    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* background-color: ; */
+    background-image: linear-gradient(white, #f3f4f6);
+    box-shadow:  0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
 .tools{
@@ -69,13 +72,18 @@
     background-color: white;  
 }
 .tools .list-group .list-group-item {
-    display: flex; height: 65px; padding: 2px;  border: none; padding-top: 6px;
+    display: flex; height: 55px; padding: 2px;  border: none; padding-top: 6px;
+    margin-bottom: 2px;
+}
+.tools .list-group .list-group-item:hover{
+    /* border: 1px solid black; */
+    background-color: #f3f4f6;
 }
 .tools .list-group .list-group-item .color-simpbol {
     height: 100%; width: 9px; background-color: red; margin-right: 20px;
 }
 .tools .list-group .list-group-item img{
-    width: 35px; height: 40px;  margin-right: 20px;padding-top: 10px; 
+    width: 33px; height: 36px;  margin-right: 20px;padding-top: 10px; 
 }
 .right .tools .list-group .list-group-item img{
     margin-left: 20px;
@@ -84,7 +92,7 @@
     margin-right: 0px;
 }
 .tools .list-group .list-group-item span{
-    font-size:20px;
+    font-size:18px;
     padding-top: 15px;
 }
 
@@ -121,7 +129,8 @@
 
 
 .center{
-    width: 44%;
+    width: 48%;
+    
 }
 
 .match_time{
@@ -319,6 +328,7 @@ Activated streams link drop down menu*/
 /* Right part of the page */
 .right{
     width: 28%;
+    direction: rtl;
 }
 
 
@@ -349,12 +359,12 @@ Activated streams link drop down menu*/
 	width: 31px;
 	height: 31px;
 	font-size: 0;
-	background-color: green;
+	
 	border: 0;
 	border-radius: 35px;
 	outline: none;
     position: absolute;
-    bottom: 24px;
+    bottom: 8px;
     margin-right: 12px;
     border: 4px solid white;
 }
@@ -373,10 +383,16 @@ Activated streams link drop down menu*/
 
 
 
-
+.controllers .btn-group table{
+    margin-left: 40px;
+}
 .controllers .btn-group table td {
     text-align: center;
     padding: 3px;
     margin-left: 50px;
     /* border: 1px solid black; */
+}
+
+.center .controllers .btn-group table td input{
+    width: 210px;
 }
