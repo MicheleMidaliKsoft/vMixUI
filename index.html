@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zero Latency</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="tabs/tab.css">
     <script src="tabs/tab.js"></script>
     
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,43 +19,6 @@
 <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 </head>
 
-<!-- <style>
-
-  .container-fluid ul li {
-    margin-top: 5px;
-    height: 30px;
-    /* background-image: linear-gradient(rgb(199, 191, 191),white); */
-  }
-  .container-fluid ul li:hover{
-    height: 35px;
-    padding-left: 40px;
-    color: red;
-  }
-
-  .container-fluid ul li input[type=radio]{
-    position: absolute;
-    right: 5px;
-    width: 30px;
-    height: 30px;
-    top: 0px;}
-
-  .container-fluid .controllers input[type=submit]{
-    box-shadow: 0 20px 50px rgba(0,0,0,.8);
-    position: relative;
-    animation: submitMove 2s;
-    animation-timing-function: ease-out;
-  }
-  @keyframes submitMove {
-    from {bottom: 100px;}
-    to {bottom: 0px;}
-  }
-  .container-fluid .controllers ul li .btn.btn-success{
-    background-color: red;
-  }
-
-</style> -->
-
-
 <body>
     <div class="wrapper">
         <div class="main">
@@ -64,62 +26,64 @@
             <div class="left">
 
               <div class="video">
-                <div><video  class="monitor" src="video/1.mp4" controls></video></div>
+                <div>
+                  <video  class="monitor" src="video/1.mp4" controls></video>
+                </div>
                 <div class="monitor-title" style="background-color: #ff8c00; color: white;">
                   <p>PREVIEW</p>
                 </div>
+              </div>  
 
               <div class="command">
-                <header style="text-align: left; padding-left: 10px;">
+                <header>
                   BASIC COMMAND AREA
                 </header>
                   <!-- I am trying to add tabs to command area -->
-                  <div class="tabs-to-dropdown">
-                    <div class="tools">
-                      <ul class="list-group">
-                        <a onfocus="background('pills-video-tab');" class="nav-links" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false">
-                          <li class="list-group-item">
-                            <div class="color-simpbol"></div>
-                            <img src="img/video-camera.png" alt="" title="">
-                            <span>Video</span>
-                          </li>
-                        </a>
-                        <a onfocus="background('pills-audio-tab');" class="nav-links" id="pills-audio-tab" data-toggle="pill" href="#pills-audio" role="tab" aria-controls="pills-audio" aria-selected="false">
-                          <li class="list-group-item">
-                            <div class="color-simpbol" style="background-color:orange;"></div>
-                            <img src="img/audio.png" alt="" title="Help">
-                            <span>Audio</span>
-                          </li>
-                        </a>
-                        <a onfocus="background('pills-vcall-tab');" class="nav-links" id="pills-vcall-tab" data-toggle="pill" href="#pills-vcall" role="tab" aria-controls="pills-vcall" aria-selected="false">
-                          <li class="list-group-item">
-                            <div class="color-simpbol" style="background-color:green ;"></div>
-                            <img src="img/call2.png" alt="" title="Help">
-                            <span>vMix Call</span>
-                          </li>
-                        </a>  
-                        <a onfocus="background('pills-production-tab');" class="nav-links" id="pills-production-tab" data-toggle="pill" href="#pills-production" role="tab" aria-controls="pills-production" aria-selected="false">
-                          <li class="list-group-item">
-                            <div class="color-simpbol" style="background-color: #4688ff;"></div>
-                            <img src="img/production.png" alt="" title="Help">
-                            <span>Components for Production</span>
-                          </li>
-                        </a>  
-                        <a onfocus="background('pills-marketing-tab');" class="nav-links" id="pills-marketing-tab" data-toggle="pill" href="#pills-marketing" role="tab" aria-controls="pills-marketing" aria-selected="false">
-                          <li class="list-group-item">
-                            <div class="color-simpbol" style="background-color: #8142e9"></div>
-                            <img src="img/marketing.png" alt="" title="Help">
-                            <span>Marketing</span>
-                          </li>
-                        </a>
-                      
-                      </ul>
-                    </div>
+                <div class="tabs-to-dropdown">
+                  <div class="tools">
+                    <ul class="list-group">
+                      <a onfocus="background('pills-video-tab');" class="nav-links" id="pills-video-tab" data-toggle="pill" href="#pills-video" role="tab" aria-controls="pills-video" aria-selected="false">
+                        <li class="list-group-item">
+                          <div class="color-simpbol"></div>
+                          <img src="img/video-camera.png" alt="" title="">
+                          <span>Video</span>
+                        </li>
+                      </a>
+                      <a onfocus="background('pills-audio-tab');" class="nav-links" id="pills-audio-tab" data-toggle="pill" href="#pills-audio" role="tab" aria-controls="pills-audio" aria-selected="false">
+                        <li class="list-group-item">
+                          <div class="color-simpbol" style="background-color:orange;"></div>
+                          <img src="img/audio.png" alt="" title="Help">
+                          <span>Audio</span>
+                        </li>
+                      </a>
+                      <a onfocus="background('pills-vcall-tab');" class="nav-links" id="pills-vcall-tab" data-toggle="pill" href="#pills-vcall" role="tab" aria-controls="pills-vcall" aria-selected="false">
+                        <li class="list-group-item">
+                          <div class="color-simpbol" style="background-color:green ;"></div>
+                          <img src="img/call2.png" alt="" title="Help">
+                          <span>vMix Call</span>
+                        </li>
+                      </a>  
+                      <a onfocus="background('pills-production-tab');" class="nav-links" id="pills-production-tab" data-toggle="pill" href="#pills-production" role="tab" aria-controls="pills-production" aria-selected="false">
+                        <li class="list-group-item">
+                          <div class="color-simpbol" style="background-color: #4688ff;"></div>
+                          <img src="img/production.png" alt="" title="Help">
+                          <span>Components for Production</span>
+                        </li>
+                      </a>  
+                      <a onfocus="background('pills-marketing-tab');" class="nav-links" id="pills-marketing-tab" data-toggle="pill" href="#pills-marketing" role="tab" aria-controls="pills-marketing" aria-selected="false">
+                        <li class="list-group-item">
+                          <div class="color-simpbol" style="background-color: #8142e9"></div>
+                          <img src="img/marketing.png" alt="" title="Help">
+                          <span>Marketing</span>
+                        </li>
+                      </a>
+                    
+                    </ul>
                   </div>
-                  <!-- End...I am trying to add tabs to command area -->
-              </div>
-              <!--<div class="app_buttons"> -->
-                 
+                </div>
+                  
+              </div><!-- End of command area -->
+
               <div class="app_buttons">
                 <div class="rec-str-buttons">
                     <span>Back</span>
@@ -134,79 +98,58 @@
                 <div class="rec-str-buttons">
                   <span>Reset</span>
                   <img src="img/reset.png" alt="" title="Reset">
+                </div>  
               </div>
-            </div>
-            
-           </div>
-            <!-- End of Left Part -->
-        </div>
 
+            </div><!-- End of Left Part -->
+            
             <div class="center">
                 <div class="match_time">
                   <table>
                     <tr>
-                      <td rowspan="4" style="width: 24%;">
+                      <td rowspan="4">
                         <img src="img/zl-logo2.png" alt="">
                       </td>
-                      <td  style="width: 30%; margin-right: 5px;">
-                        <p>Event ID: &nbsp;1234567 <br> Event Name: &nbsp;Soccer Match </p>
+                      <td>
+                        <p>Event ID: &nbsp;1234567 <br> Event Name: &nbsp;Soccer Match Milan/Inter</p>
                       </td>
-                      <td  style="width: 28%; padding-left: 15px;" >
+                      <td>
                           <p>Start: &nbsp; 21/10/2023 13:00 <br> Finish: &nbsp; 22/10/2023 15:00</p> 
                       </td>
                       <td>
-                        <p id="time" style="text-align: center; padding-left: 20px;"></p>
+                        <p id="time" style=" text-align: right;"></p>
                       </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <!-- <div class="dropdown">
-                          <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                            <span>Link Activared Stream &nbsp;<strong>&#9759;</strong></span>
-                            <i class="fa fa-caret-down"></i>
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Link 1</a></li>
-                            <li><a class="dropdown-item" href="#">Link 2</a></li>
-                            <li><a class="dropdown-item" href="#">Link 3</a></li>
-                            <li><a class="dropdown-item" href="#">Link 4</a></li>
-                            <li><a class="dropdown-item" href="#">Link 5</a></li>
-                            <li><a class="dropdown-item" href="#">Link 6</a></li>
-                            <li><a class="dropdown-item" href="#">Link 7</a></li>
-                            <li><a class="dropdown-item" href="#">Link 8</a></li>
-                          </ul>
-                        </div> -->
-                      </td>
+                      <td> <span style="color: #f3f4f6;">.</span> </td>
                     </tr>
                   </table>
                 </div>
+
+
                 <div class="tabs-to-dropdown">
-                    <div class="nav-wrapper d-flex align-items-center justify-content-between" 
-                        style="color: black !important; padding: 0px; padding-left: 33px;">
-                      <ul class="nav d-none d-md-flex" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation"  style="float: left !important; margin-left: 35px;">
-                          <a onfocus="background('pills-prematch-tab');" class="nav-links" id="pills-prematch-tab" data-toggle="pill" href="#pills-prematch" role="tab" aria-controls="pills-prematch" aria-selected="false">   <!-- style="background-color: transparent !important;" -->
+                    <div class="nav-wrapper" style="padding: 0px;">
+                      <ul class="nav d-none d-md-flex" id="pills-tab" role="tablist" style="display: flex;">
+                        <li class="nav-item" role="presentation" >
+                          <a onfocus="background('pills-prematch-tab');" class="nav-links" id="pills-prematch-tab" data-toggle="pill" href="#pills-prematch" role="tab" aria-controls="pills-prematch" aria-selected="false">   
                             <label for="" class="step-number">1</label> &nbsp; PREMATCH
                           </a>
                         </li>
-                        <li class="nav-item" role="presentation" style="float: left !important; margin-left: 35px;">
+                        <li class="nav-item" role="presentation">
                           <a onfocus="background('pills-match-tab');" class="nav-links" id="pills-match-tab" data-toggle="pill" href="#pills-match" role="tab" aria-controls="pills-match" aria-selected="false">
                             <label for="" class="step-number">2</label> &nbsp; MATCH
                           </a>
                         </li>
-                        <li class="nav-item" role="presentation" style="float: left !important; margin-left: 35px;">
+                        <li class="nav-item" role="presentation">
                           <a onfocus="background('pills-pmatch-tab');" class="nav-links" id="pills-pmatch-tab" data-toggle="pill" href="#pills-pmatch" role="tab" aria-controls="pills-pmatch" aria-selected="false">
                             <label for="" class="step-number">3</label> &nbsp; POST MATCH
                           </a>
                         </li>
                       </ul>
                     </div>
+
                   
                     <div class="tab-content" id="pills-tabContent">
             
-                      <div class="tab-pane fade" id="pills-prematch" role="tabpanel" aria-labelledby="pills-prematch-tab" 
-                           style="border: none;
-                           box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-prematch" role="tabpanel" aria-labelledby="pills-prematch-tab" style="border: none;">
                         <div class="container-fluid">
                           <form action="">
                             <div class="tools">
@@ -273,12 +216,8 @@
                         </div>
                       </div>
                       <!-- end of prematch controller -->
-                      <div class="tab-pane fade" id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab"
-                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-match" role="tabpanel" aria-labelledby="pills-match-tab">
                         <div class="container-fluid">
-
-
-
 
                           <form action="">
                             <div class="tools">
@@ -293,7 +232,7 @@
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" ></div>
-                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Scoreboard Time First Half</label>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Scoreboard Time Second Half</label>
                                   <input type="radio" id="SCOREBOARD_TIME_SECOND_HALF" name="options" value="SCOREBOARD_TIME_SECOND_HALF">
                                   <input type="button" value="Start Time" class="btn btn-success" name="" 
                                          style="margin-left: 20px; position: absolute; right: 4px;">
@@ -359,9 +298,7 @@
                         </div>
                       </div>
                       <!-- end of match controller -->
-                      <div class="tab-pane fade" id="pills-pmatch" role="tabpanel" aria-labelledby="pills-pmatch-tab" 
-                           style="border: none;
-                           box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-pmatch" role="tabpanel" aria-labelledby="pills-pmatch-tab" style="border: none;">
                         <div class="container-fluid">
                           <form action="">
                             <div class="tools">
@@ -408,9 +345,7 @@
                       </div>
                       <!-- end of post match controller -->
 
-                      <div class="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab" 
-                           style="border: none;
-                           box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-video" role="tabpanel" aria-labelledby="pills-video-tab" style="border: none;">
                         <div class="container-fluid">
                           <form action="">
                             <div class="tools">
@@ -471,9 +406,7 @@
                         </div>
                       </div>
                       <!-- end of Video controller -->
-                      <div class="tab-pane fade" id="pills-audio" role="tabpanel" aria-labelledby="pills-audio-tab" 
-                           style="border: none;
-                           box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-audio" role="tabpanel" aria-labelledby="pills-audio-tab" style="border: none;">
                         <div class="container-fluid">
                           <form action="">
                             <div class="tools">
@@ -534,9 +467,7 @@
                         </div>
                       </div>
                       <!-- end of Audio controller -->
-                      <div class="tab-pane fade" id="pills-vcall" role="tabpanel" aria-labelledby="pills-vcall-tab" 
-                           style="border: none;
-                           box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-vcall" role="tabpanel" aria-labelledby="pills-vcall-tab" style="border: none;">
                         <div class="container-fluid">
                           <form action="">
                             <div class="tools">
@@ -592,10 +523,10 @@
                                 <input type="submit" value="ON LINE" class="btn btn-success" name="online">
                                 <table style="padding-top: 2px;">
                                   <tr>
-                                    <td style="width: 25px;"></td>
+                                    <td class="vmix-td-space"></td>
                                     <td class="vmax_button"><label for="vehicle2"> AUDIO</label></td>
                                     <td><input type="checkbox" checked data-toggle="toggle" data-size="lg"></td>
-                                    <td style="width: 25px;"></td>
+                                    <td class="vmix-td-space"></td>
                                     <td class="vmax_button"><label for="vehicle3"> IFB</label></td>
                                     <td><input type="checkbox" checked data-toggle="toggle" data-size="lg"></td>
                                   </tr>
@@ -606,8 +537,7 @@
                         </div>
                       </div>
                       <!-- end of VMix call controller -->
-                      <div class="tab-pane fade" id="pills-production" role="tabpanel" aria-labelledby="pills-production-tab"
-                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-production" role="tabpanel" aria-labelledby="pills-production-tab">
                         <div class="container-fluid">
                           <form action="">
                             <div class="tools">
@@ -654,9 +584,7 @@
                       </div>
 
                       <!-- Marketing call controller -->
-                      <div class="tab-pane fade" id="pills-marketing" role="tabpanel" aria-labelledby="pills-marketing-tab" 
-                           style="border: none;
-                           box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-marketing" role="tabpanel" aria-labelledby="pills-marketing-tab" style="border: none;">
                         <div class="container-fluid">
                           <form action="">
                             <div class="tools">
@@ -691,9 +619,7 @@
                       </div>
                       <!-- end of Marketing call controller -->
                       
-                      <div class="tab-pane fade" id="pills-effect" role="tabpanel" aria-labelledby="pills-effect-tab" 
-                           style="border: none;
-                           box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-effect" role="tabpanel" aria-labelledby="pills-effect-tab" style="border: none;">
                         <div class="container-fluid">
                           <form action="">
                             <div class="tools">
@@ -750,9 +676,7 @@
                         </div>
                       </div>
                       <!-- end of Effect controller -->
-                      <div class="tab-pane fade" id="pills-replay" role="tabpanel" aria-labelledby="pills-replay-tab" 
-                           style="border: none;
-                           box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-replay" role="tabpanel" aria-labelledby="pills-replay-tab" style="border: none;">
                         <div class="container-fluid">
                           <form action="">
                             <div class="tools">
@@ -767,19 +691,19 @@
                               </ul>
                             </div>
                             <div class="controllers">
-                              <div class="btn-group" style="display: flex;">
+                              <div class="btn-group">
 
                                 <table>
                                   <tr>
                                     <td></td>
-                                    <td style="width: 80px;"></td>
+                                    <td class="td-space"></td>
                                     <td>
                                       <input type="submit" value="Last Mark ONLIVE" class="btn btn-danger" name="preview">
                                     </td>
                                   </tr> 
                                   <tr>
                                     <td></td>
-                                    <td style="width: 80px;"></td>
+                                    <td class="td-space"></td>
                                     <td>
                                       <input type="submit" value="Replay Speed Freeze" class="btn btn-warning" name="reset">
                                     </td>
@@ -788,7 +712,7 @@
                                     <td>
                                       <input type="submit" value="Start/Stop Instant Replay" class="btn btn-danger" name="preview">
                                     </td>
-                                    <td style="width: 80px;"></td>
+                                    <td class="td-space"></td>
                                     <td>
                                       <input type="submit" value="Replay Speed 25%" class="btn btn-warning" name="reset">
                                     </td>
@@ -797,7 +721,7 @@
                                     <td>
                                       <input type="submit" value="Mark Replay-10s" class="btn btn-success" name="online">
                                     </td>
-                                    <td style="width: 80px;"></td>
+                                    <td class="td-space"></td>
                                     <td>
                                       <input type="submit" value="Replay Speed 50%" class="btn btn-warning" name="reset">
                                     </td>
@@ -806,7 +730,7 @@
                                     <td>
                                       <input type="submit" value="Mark Replay-20s" class="btn btn-success" name="online">
                                     </td>
-                                    <td style="width: 80px;"></td>
+                                    <td class="td-space"></td>
                                     <td>
                                       <input type="submit" value="Replay Real Speed" class="btn btn-warning" name="reset">
                                     </td>
@@ -817,8 +741,7 @@
                           </form>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="pills-title" role="tabpanel" aria-labelledby="pills-title-tab"
-                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-title" role="tabpanel" aria-labelledby="pills-title-tab">
                         <div class="container-fluid">
                           <div style="position: absolute;
                             top: 50%;
@@ -830,8 +753,7 @@
                             </div>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="pills-virset" role="tabpanel" aria-labelledby="pills-virset-tab"
-                            style="border: none;box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);">
+                      <div class="tab-pane fade" id="pills-virset" role="tabpanel" aria-labelledby="pills-virset-tab">
                         <div class="container-fluid">
                           
                             <div style="position: absolute;
@@ -848,16 +770,21 @@
             
                     </div>
                 </div>
-            </div>
+            </div><!-- End of Center partition -->  
+            
             <div class="right">
-              <div class="video" style="direction: rtl;">
-                <div><video  class="monitor" src="video/1.mp4" controls></video></div>
+
+              <div class="video">
+                <div>
+                  <video  class="monitor" src="video/1.mp4" controls></video>
+                </div>
                 <div class="monitor-title" style="background-color: #006400; color: white;">
                   <p>ON LIVE</p>
-                </div
+                </div>
               </div>
+
               <div class="command">
-                <header style="text-align: right; padding-right: 10px;">
+                <header>
                   SPECIAL COMMAND AREA
                 </header>
                 <!-- special commands area -->
@@ -865,7 +792,7 @@
                 <div class="tools">
                    <div class="nav-wrapper">
 
-                      <ul class="list-group" style="direction:rtl;">
+                      <ul class="list-group">
                         <a onfocus="background('pills-effect-tab');" class="nav-links" id="pills-effect-tab" data-toggle="pill" href="#pills-effect" role="tab" aria-controls="pills-effect" aria-selected="false">
                           <li class="list-group-item">
                             <div class="color-simpbol"></div>
@@ -898,21 +825,40 @@
                     </div>
                   </div>
                 <!-- End of the special commands area -->
-              </div>
-              <div class="app_buttons" style="direction: rtl; font-size: 16px;">
+              </div><!-- End of command area -->
+              
+              <div class="app_buttons">
                 <div class="rec-str-buttons" style="margin-left: 20px;">
-                    <span>Streaming</span>
-                    <button id="strButton" style="background-color: green;"></button>
+                    <table>
+                      <tr>
+                        <td>
+                          <button id="strButton" style="background-color: green;"></button>
+                        </td>
+                        <td>
+                          <span>Streaming</span>
+                        </td>
+                      </tr>
+                    </table>
                 </div>
                 
                 <div class="rec-str-buttons">
-                    <span>Recording</span>
-                    <button id="recButton" style="background-color: red;"></button>
+                  <table>
+                    <tr>
+                      <td>
+                        <button id="recButton" style="background-color: red;"></button>
+                      </td>
+                      <td>
+                        <span>Recording</span>
+                      </td>
+                    </tr>
+                  </table>
                 </div>
               </div>
-            </div>
-        </div>
-    </div>
+
+            </div><!-- End of Right partition -->
+            
+        </div><!-- End of main -->
+    </div><!-- End of wrapper -->
 
     <!-- A tags background after clicking -->
     <script>
@@ -959,40 +905,6 @@
 
     <!-- Streaming and Recording buttons  -->
     <script>
-      // const button = document.getElementById("recButton");
-      // let isClicked1 = false;
-
-      // button.addEventListener("click", function () {
-      //   if (isClicked1) {
-      //     // Change the background color back to its previous color (e.g., green)
-      //     button.style.backgroundColor = "red";
-      //   } else {
-      //     // Change the background color to the new color (e.g., red)
-      //     button.style.backgroundColor = "yellow";
-      //   }
-
-      //   // Toggle the clicked state
-      //   isClicked1 = !isClicked1;
-      // });
-
-      // const strbutton = document.getElementById("strButton");
-      // let isClicked = false;
-
-      // strbutton.addEventListener("click", function () {
-      //   if (isClicked) {
-      //     // Change the background color back to its previous color (e.g., green)
-      //     strbutton.style.backgroundColor = "green";
-      //   } else {
-      //     // Change the background color to the new color (e.g., red)
-      //     strbutton.style.backgroundColor = "red";
-      //   }
-
-      //   // Toggle the clicked state
-      //   isClicked = !isClicked;
-      // });
-
-
-      
     function blinkButton(button) {
         let originalColor = button.style.backgroundColor;
         let newColor = "black"; // You can change this to the desired blink color

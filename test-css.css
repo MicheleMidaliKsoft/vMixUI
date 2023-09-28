@@ -39,21 +39,18 @@
         width: 100%; /* Full width for individual columns on small screens */
     }
 }
-
+/* 
 @media screen and (max-width: 450px) {
     .main {
         display: block;
     }
-}
+} */
 
 
 
 .left{
     width: 28%;
     height: 100%;
-}
-.center{
-    width: 48%; 
 }
 .right{
     width: 28%;
@@ -65,8 +62,9 @@
         /* width: 100%;
         height: 280px; */
         width: 100%;
+        /* height: 41%; */
         margin-bottom: 3px;
-        
+        background-color: red;
     }
         .video .monitor{
             /* width: 403.2px;
@@ -123,6 +121,7 @@
     .app_buttons{
         display: flex;
         line-height: 60px;
+        height: 60px;
         padding-top: 18px;
         position: absolute;
         bottom: 10px;
@@ -154,7 +153,10 @@
 
 
 
-/* Center Partition */
+.center{
+    width: 48%;
+    
+}
 
 .match_time{
     text-align: center;
@@ -163,9 +165,10 @@
     margin-bottom: 7px;
     padding: 2.5px;
     background-color: #f3f4f6;
-    padding-right: 10px;
 }
-
+.match_time td{
+ font-size: 14px;  
+}
 .match_time td:nth-child(1){
     width:22%;
 }
@@ -179,7 +182,6 @@
 }
 .match_time td:nth-child(4){
     text-align: right;
-    width: 14%;
 }
 .match_time td img {
     width: 100px;
@@ -187,7 +189,6 @@
 }
 .match_time td p {
     text-align: left;
-    font-size: 14px;  
 }
 
 @media screen and (max-width: 768px) {
@@ -207,28 +208,11 @@
 }    
 
   
-
-
-/* top nav bar (match, prematch, post match) */
 .tabs-to-dropdown .nav-wrapper {
+    padding: 1px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
     background-color: #f3f4f6;
-  }
-.tabs-to-dropdown .nav-wrapper ul{
-    display: flex;    
-    justify-content: space-between; /* Distribute items evenly with equal space between them */
-    align-items: center; /* Vertically center items */
-    padding: 0 20px;
-}
-.tabs-to-dropdown .nav-wrapper li{
-  flex: 1; /* Make each box flex to occupy equal space */
-  text-align: center; /* Center the content horizontally within each box */
-  margin: 0 10px; /* Optional: Add margin between the boxes */
-}
-  /* prematch - match - post mach buttons */
-  .tabs-to-dropdown .nav-wrapper a {
-    font-size:medium;
-    color: black;
+    
   }
   .tabs-to-dropdown .nav-wrapper .step-number{
     border-radius: 50%;
@@ -239,7 +223,22 @@
     border: 1px solid gray;
   }
 
-
+  /* prematch - match - post mach buttons */
+  .tabs-to-dropdown .nav-wrapper a {
+    font-size:medium;
+    color: black;
+  }
+  
+  .controllers{
+    padding: 5px;
+    position: fixed;
+    bottom: 5px;
+}
+    .controllers input{
+        width: 95px;
+        height: 35px;
+        margin: 4px;
+    } 
 
   .tools .nav-links{
     color: black;
@@ -248,16 +247,35 @@
   }
   .tools .nav-links:hover {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
-    color: red;
+    color: blue;
+  }
+  .tools .nav-links:visited {
+    color: pink;
   }
 
+  .tabs-to-dropdown .nav-pills .nav-link.active {
+    background-color: var(--darkgreen);
+  }
 
+  .tabs-to-dropdown .nav-pills .nav-link:hover {
+    color: black;
+  }
+  
+  .tabs-to-dropdown .nav-pills li:not(:last-child) {
+    margin-right: 30px;
+    margin-inline-start: 10px;
+    color: black !important;  padding-left: 33px;
+  }
+
+  
   .tabs-to-dropdown .tab-content .container-fluid {
     max-width: 1250px;
     padding-top: 7px;
+    height: 536px;
+    /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12); */
     margin-top: 8px;
+    background-color: white;
   }
-
   .container-fluid .tools{
     padding: 5px;   
     }
@@ -295,18 +313,6 @@
     }
   }
 
-
-
-.controllers{
-    padding: 5px;
-    position: absolute;
-    bottom: 10px;
-}
-.controllers input{
-    width: 95px;
-    height: 35px;
-    margin: 4px;
-} 
   /* Instant replay -td-space */
   .td-space{
     width: 80px;
