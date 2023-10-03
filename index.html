@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zero Latency</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="tabs/tab.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/tab.js"></script>
     
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <!-- jQuery library -->
@@ -67,7 +67,7 @@
                         <li class="list-group-item">
                           <div class="color-simpbol" style="background-color: #4688ff;"></div>
                           <img src="img/production.png" alt="" title="Help">
-                          <span>Components for Production</span>
+                          <span>Components for Video Production</span>
                         </li>
                       </a>  
                       <a onfocus="background('pills-marketing-tab');" class="nav-links" id="pills-marketing-tab" data-toggle="pill" href="#pills-marketing" role="tab" aria-controls="pills-marketing" aria-selected="false">
@@ -81,26 +81,23 @@
                     </ul>
                   </div>
                 </div>
+                <div class="app_buttons">
+                  <div class="rec-str-buttons">
+                      <span>Back</span>
+                      <img src="img/back.png" alt="" title="Back">
+                  </div>
                   
+                  <div class="rec-str-buttons">
+                      <span>Help</span>
+                      <img src="img/help.png" alt="" title="Help">
+                  </div>
+  
+                  <div class="rec-str-buttons" style="background-color: red;">
+                    <span>Reset</span>
+                    <img src="img/reset.png" alt="" title="Reset">
+                  </div>  
+                </div>
               </div><!-- End of command area -->
-
-              <div class="app_buttons">
-                <div class="rec-str-buttons">
-                    <span>Back</span>
-                    <img src="img/back.png" alt="" title="Back">
-                </div>
-                
-                <div class="rec-str-buttons">
-                    <span>Help</span>
-                    <img src="img/help.png" alt="" title="Help">
-                </div>
-
-                <div class="rec-str-buttons">
-                  <span>Reset</span>
-                  <img src="img/reset.png" alt="" title="Reset">
-                </div>  
-              </div>
-
             </div><!-- End of Left Part -->
             
             <div class="center">
@@ -111,7 +108,7 @@
                         <img src="img/zl-logo2.png" alt="">
                       </td>
                       <td>
-                        <p>Event ID: &nbsp;1234567 <br> Event Name: &nbsp;Soccer Match Milan/Inter</p>
+                        <p>Event ID: &nbsp;1234567 <br> Event Name: &nbsp;Serie A Milan/Inter</p>
                       </td>
                       <td>
                           <p>Start: &nbsp; 21/10/2023 13:00 <br> Finish: &nbsp; 22/10/2023 15:00</p> 
@@ -201,16 +198,15 @@
                                   <input type="radio" id="var_referees" name="options" value="var_referees">
                                 </li>
                               </ul>
-                            
-                            </div>
-                          
-                            <div class="controllers">
-                              <div class="btn-group">
-                                <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
-                                <input type="submit" value="RESET" class="btn btn-warning" name="reset">
-                                <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                              <br><br>
+                              <div class="controllers">
+                                <div class="btn-group">
+                                  <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
+                                  <input type="submit" value="RESET" class="btn btn-warning" name="reset">
+                                  <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                                </div>
                               </div>
-                            </div>
+                            </div><!-- end of tools -->
                           </form>  
 
                         </div>
@@ -227,15 +223,13 @@
                                   <div class="color-simpbol"></div>
                                   <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Scoreboard Time First Half</label>
                                   <input type="radio" id="SCOREBOARD_TIME_FIRST_HALF" name="options" value="SCOREBOARD_TIME_FIRST_HALF">
-                                  <input type="button" value="Start Time" class="btn btn-success" name="" 
-                                         style="margin-left: 20px; position: absolute; right: 4px;">
+                                  <input type="button" value="Start Time" class="btn btn-success" name="" id="start-time">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" ></div>
                                   <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Scoreboard Time Second Half</label>
                                   <input type="radio" id="SCOREBOARD_TIME_SECOND_HALF" name="options" value="SCOREBOARD_TIME_SECOND_HALF">
-                                  <input type="button" value="Start Time" class="btn btn-success" name="" 
-                                         style="margin-left: 20px; position: absolute; right: 4px;">
+                                  <input type="button" value="Start Time" class="btn btn-success" name="" id="start-time">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" ></div>
@@ -283,14 +277,13 @@
                                   <input type="radio" id="" name="SUBSTITUTES_AWAY" value="SUBSTITUTES_AWAY">
                                 </li>
                               </ul>
-                            
-                            </div>
-                          
-                            <div class="controllers">
-                              <div class="btn-group">
-                                <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
-                                <input type="submit" value="RESET" class="btn btn-warning" name="reset">
-                                <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                              <br><br>
+                              <div class="controllers">
+                                <div class="btn-group">
+                                  <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
+                                  <input type="submit" value="RESET" class="btn btn-warning" name="reset">
+                                  <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                                </div>
                               </div>
                             </div>
                           </form>                            
@@ -312,32 +305,24 @@
                                 
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color:orange"></div>
-                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Corner Home</label>
+                                  <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Corner</label>
                                   <input type="radio" id="CORNER_HOME" name="options" value="CORNER_HOME">
                                 </li>
-                                <li class="list-group-item">
-                                  <div class="color-simpbol" style="background-color:orange"></div>
-                                  <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Corner Away</label>
-                                  <input type="radio" id="CORNER_AWAY" name="options" value="CORNER_AWAY">
-                                </li>
+                                
                                 <li class="list-group-item">
                                   <div class="color-simpbol"  style="background-color:green"></div>
-                                  <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Fouls Home</label>
+                                  <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Fouls</label>
                                   <input type="radio" id="FOULS_HOME" name="options" value="FOULS_HOME">
                                 </li>
-                                <li class="list-group-item">
-                                  <div class="color-simpbol" style="background-color:green"></div>
-                                  <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Fouls Away</label>
-                                  <input type="radio" id="FOULS_AWAY" name="options" value="FOULS_AWAY">
-                                </li>
+                                
                               </ul>
-                            </div>
-                          
-                            <div class="controllers">
-                              <div class="btn-group">
-                                <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
-                                <input type="submit" value="RESET" class="btn btn-warning" name="reset">
-                                <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                              <br><br>
+                              <div class="controllers">
+                                <div class="btn-group">
+                                  <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
+                                  <input type="submit" value="RESET" class="btn btn-warning" name="reset">
+                                  <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                                </div>
                               </div>
                             </div>
                           </form>
@@ -393,13 +378,12 @@
                                 </li>
                                 
                               </ul>
-                            </div>
-                          
-                            <div class="controllers">
-                              <div class="btn-group">
-                                <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
-                                <input type="submit" value="RESET" class="btn btn-warning" name="reset">
-                                <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                              <div class="controllers">
+                                <div class="btn-group">
+                                  <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
+                                  <input type="submit" value="RESET" class="btn btn-warning" name="reset">
+                                  <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                                </div>
                               </div>
                             </div>
                           </form>
@@ -415,50 +399,42 @@
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: red;"></div>
                                   <label for="" class="step-number">1 &nbsp; &nbsp; &nbsp; Audio Camera 1</label>
-                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
-                                         style="position: absolute; right: 280px;">
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="">
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: orange;"></div>
                                   <label for="" class="step-number">2 &nbsp; &nbsp; &nbsp; Audio Camera 2</label>
-                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
-                                         style="position: absolute; right: 280px;">
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" >
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: green;"></div>
                                   <label for="" class="step-number">3 &nbsp; &nbsp; &nbsp; Audio Camera 3</label>
-                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
-                                         style="position: absolute; right: 280px;">
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" >
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: #4688ff;"></div>
                                   <label for="" class="step-number">4 &nbsp; &nbsp; &nbsp; Audio Camera 4</label>
-                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
-                                         style="position: absolute; right: 280px;">
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" >
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: #8142e9;"></div>
                                   <label for="" class="step-number">5 &nbsp; &nbsp; &nbsp; Audio Camera 5</label>
-                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
-                                         style="position: absolute; right: 280px;">
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" >
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: red;"></div>
                                   <label for="" class="step-number">6 &nbsp; &nbsp; &nbsp; Audio Camera 6</label>
-                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
-                                         style="position: absolute; right: 280px;">
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" >
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: orange;"></div>
                                   <label for="" class="step-number">7 &nbsp; &nbsp; &nbsp; Audio Camera 7</label>
-                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
-                                         style="position: absolute; right: 280px;">
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" >
                                 </li>
                                 <li class="list-group-item">
                                   <div class="color-simpbol" style="background-color: green;"></div>
                                   <label for="" class="step-number">8 &nbsp; &nbsp; &nbsp; Audio Camera 8</label>
-                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" 
-                                         style="position: absolute; right: 280px;">
+                                  <input type="button" value="ON/OFF" class="btn btn-success" name="" >
                                 </li>
                                 
                               </ul>
@@ -514,23 +490,22 @@
                                   <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
                                 </li>
                               </ul>
-                            </div>
-                          
-                            <div class="controllers">
-                              <div class="btn-group">
-                                <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
-                                <input type="submit" value="RESET" class="btn btn-warning" name="reset">
-                                <input type="submit" value="ON LINE" class="btn btn-success" name="online">
-                                <table style="padding-top: 2px;">
-                                  <tr>
-                                    <td class="vmix-td-space"></td>
-                                    <td class="vmax_button"><label for="vehicle2"> AUDIO</label></td>
-                                    <td><input type="checkbox" checked data-toggle="toggle" data-size="lg"></td>
-                                    <td class="vmix-td-space"></td>
-                                    <td class="vmax_button"><label for="vehicle3"> IFB</label></td>
-                                    <td><input type="checkbox" checked data-toggle="toggle" data-size="lg"></td>
-                                  </tr>
-                                </table>
+                              <div class="controllers">
+                                <div class="btn-group">
+                                  <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
+                                  <input type="submit" value="RESET" class="btn btn-warning" name="reset">
+                                  <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                                  <table>
+                                    <tr>
+                                      <td class="vmix-td-space"></td>
+                                      <td class="vmax_button"><label for="vehicle2"> AUDIO</label></td>
+                                      <td><input type="checkbox" checked data-toggle="toggle" data-size="lg"></td>
+                                      <td class="vmix-td-space"></td>
+                                      <td class="vmax_button"><label for="vehicle3"> IFB</label></td>
+                                      <td><input type="checkbox" checked data-toggle="toggle" data-size="lg"></td>
+                                    </tr>
+                                  </table>
+                                </div>
                               </div>
                             </div>
                           </form>
@@ -570,13 +545,12 @@
                                 </li>
                                 
                               </ul>
-                            </div>
-                          
-                            <div class="controllers">
-                              <div class="btn-group">
-                                <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
-                                <input type="submit" value="RESET" class="btn btn-warning" name="reset">
-                                <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                              <div class="controllers">
+                                <div class="btn-group">
+                                  <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
+                                  <input type="submit" value="RESET" class="btn btn-warning" name="reset">
+                                  <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                                </div>
                               </div>
                             </div>
                           </form>
@@ -606,14 +580,15 @@
                                   <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
                                 </li>
                               </ul>
-                            </div>    
-                            <div class="controllers">
-                              <div class="btn-group">
-                                <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
-                                <input type="submit" value="RESET" class="btn btn-warning" name="reset">
-                                <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                              <div class="controllers">
+                                <div class="btn-group">
+                                  <input type="submit" value="PREVIEW" class="btn btn-danger" name="preview">
+                                  <input type="submit" value="RESET" class="btn btn-warning" name="reset">
+                                  <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                                </div>
                               </div>
-                            </div>
+                            </div>    
+                            
                           </form>
                         </div>
                       </div>
@@ -666,12 +641,13 @@
                                   <input type="radio" id="SCOREBOARD_FINAL" name="options" value="cam1">
                                 </li>
                               </ul>
-                            </div>
-                            <div class="controllers">
-                              <div class="btn-group">
-                                <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                              <div class="controllers">
+                                <div class="btn-group">
+                                  <input type="submit" value="ON LINE" class="btn btn-success" name="online">
+                                </div>
                               </div>
                             </div>
+                            
                           </form>
                         </div>
                       </div>
@@ -689,65 +665,62 @@
                                 </li>
                                 
                               </ul>
-                            </div>
-                            <div class="controllers">
-                              <div class="btn-group">
-
-                                <table>
-                                  <tr>
-                                    <td></td>
-                                    <td class="td-space"></td>
-                                    <td>
-                                      <input type="submit" value="Last Mark ONLIVE" class="btn btn-danger" name="preview">
-                                    </td>
-                                  </tr> 
-                                  <tr>
-                                    <td></td>
-                                    <td class="td-space"></td>
-                                    <td>
-                                      <input type="submit" value="Replay Speed Freeze" class="btn btn-warning" name="reset">
-                                    </td>
-                                  </tr> 
-                                  <tr>
-                                    <td>
-                                      <input type="submit" value="Start/Stop Instant Replay" class="btn btn-danger" name="preview">
-                                    </td>
-                                    <td class="td-space"></td>
-                                    <td>
-                                      <input type="submit" value="Replay Speed 25%" class="btn btn-warning" name="reset">
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <input type="submit" value="Mark Replay-10s" class="btn btn-success" name="online">
-                                    </td>
-                                    <td class="td-space"></td>
-                                    <td>
-                                      <input type="submit" value="Replay Speed 50%" class="btn btn-warning" name="reset">
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <input type="submit" value="Mark Replay-20s" class="btn btn-success" name="online">
-                                    </td>
-                                    <td class="td-space"></td>
-                                    <td>
-                                      <input type="submit" value="Replay Real Speed" class="btn btn-warning" name="reset">
-                                    </td>
-                                  </tr>
-                                </table>
+                              <div class="controllers">
+                                <div class="btn-group">
+  
+                                  <table>
+                                    <tr>
+                                      <td></td>
+                                      <td class="td-space"></td>
+                                      <td>
+                                        <input type="submit" value="Last Mark ONLIVE" class="btn btn-danger" name="preview">
+                                      </td>
+                                    </tr> 
+                                    <tr>
+                                      <td></td>
+                                      <td class="td-space"></td>
+                                      <td>
+                                        <input type="submit" value="Replay Speed Freeze" class="btn btn-warning" name="reset">
+                                      </td>
+                                    </tr> 
+                                    <tr>
+                                      <td>
+                                        <input type="submit" value="Start/Stop Instant Replay" class="btn btn-danger" name="preview">
+                                      </td>
+                                      <td class="td-space"></td>
+                                      <td>
+                                        <input type="submit" value="Replay Speed 25%" class="btn btn-warning" name="reset">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <input type="submit" value="Mark Replay-10s" class="btn btn-success" name="online">
+                                      </td>
+                                      <td class="td-space"></td>
+                                      <td>
+                                        <input type="submit" value="Replay Speed 50%" class="btn btn-warning" name="reset">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <input type="submit" value="Mark Replay-20s" class="btn btn-success" name="online">
+                                      </td>
+                                      <td class="td-space"></td>
+                                      <td>
+                                        <input type="submit" value="Replay Real Speed" class="btn btn-warning" name="reset">
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
                               </div>
                             </div>
+                            
                           </form>
                         </div>
                       </div>
                       <div class="tab-pane fade" id="pills-title" role="tabpanel" aria-labelledby="pills-title-tab">
                         <div class="container-fluid">
-                          <div style="position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            text-align: center;">
+                          <div class="coming-soon">
                               <h1>COMING SOON</h1>
                               <hr class="line_coming">
                             </div>
@@ -755,16 +728,10 @@
                       </div>
                       <div class="tab-pane fade" id="pills-virset" role="tabpanel" aria-labelledby="pills-virset-tab">
                         <div class="container-fluid">
-                          
-                            <div style="position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            text-align: center;">
+                            <div class="coming-soon">
                               <h1>COMING SOON</h1>
                               <hr class="line_coming">
                             </div>
-                          
                         </div>
                       </div>
             
@@ -825,38 +792,34 @@
                     </div>
                   </div>
                 <!-- End of the special commands area -->
-              </div><!-- End of command area -->
-              
-              <div class="app_buttons">
-                <div class="rec-str-buttons" style="margin-left: 20px;">
+                <div class="app_buttons">
+                  <div class="rec-str-buttons">
+                      <table>
+                        <tr>
+                          <td>
+                            <button id="strButton" style="background-color: green;"></button>
+                          </td>
+                          <td>
+                            <span>Streaming</span>
+                          </td>
+                        </tr>
+                      </table>
+                  </div>        
+                  <div class="rec-str-buttons">
                     <table>
                       <tr>
                         <td>
-                          <button id="strButton" style="background-color: green;"></button>
+                          <button id="recButton" style="background-color: red;"></button>
                         </td>
                         <td>
-                          <span>Streaming</span>
+                          <span>Recording</span>
                         </td>
                       </tr>
                     </table>
+                  </div>
                 </div>
-                
-                <div class="rec-str-buttons">
-                  <table>
-                    <tr>
-                      <td>
-                        <button id="recButton" style="background-color: red;"></button>
-                      </td>
-                      <td>
-                        <span>Recording</span>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-
+              </div><!-- End of command area -->
             </div><!-- End of Right partition -->
-            
         </div><!-- End of main -->
     </div><!-- End of wrapper -->
 
